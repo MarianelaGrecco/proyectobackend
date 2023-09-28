@@ -1,0 +1,30 @@
+<h1>Lista de Productos</h1>
+  <div class="row">
+    {{#each products}}
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h2>{{title}}</h2>
+            <p><strong>Descripción:</strong> {{description}}</p>
+            <p><strong>Precio:</strong> ${{price}}</p>
+            <p><strong>Categoría:</strong> {{category}}</p>
+            <p><strong>Stock:</strong> {{stock}}</p>
+
+            <a href="/products/{{pid}}" class="btn btn-primary">Ver detalles</a>
+            
+            <form method="POST" action="/cart/{{cid}}/products/{{pid}}">
+  <input type="hidden" name="cid" value="{{cid}}">
+  <input type="hidden" name="pid" value="{{pid}}">
+  <label for="quantity">Cantidad:</label>
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit" class="btn btn-success">Agregar al carrito</button>
+</form>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+
+
+

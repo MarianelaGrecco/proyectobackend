@@ -1,0 +1,121 @@
+
+2023-09-21T14:41:15.412Z error: Error fetching user: user is not defined
+2023-09-21T14:42:38.581Z error: Error fetching all users: users is not defined
+2023-09-21T14:43:02.084Z error: Error fetching user: user is not defined
+2023-09-21T14:44:38.999Z error: Error fetching user: user is not defined
+2023-09-21T14:53:46.757Z error: Error signing up user: newUser is not defined
+2023-09-21T14:56:36.221Z error: Error signing up user: newUser is not defined
+2023-09-21T14:57:10.061Z error: Error signing up user: newUser is not defined
+2023-09-21T15:13:52.904Z error: Error signing up user: newUser is not defined
+2023-09-21T15:17:54.964Z error: Error signing up user: newUser is not defined
+2023-09-21T15:18:19.212Z error: Error signing up user: newUser is not defined
+2023-09-21T15:38:04.443Z error: Error signing up user: newUser is not defined
+2023-09-21T15:54:27.588Z error: Error signing up user: usersService is not defined
+2023-09-21T15:55:06.487Z error: Error signing up user: usersService is not defined
+2023-09-21T15:55:23.942Z error: Error signing up user: usersService is not defined
+2023-09-23T02:00:51.493Z error: Error fetching user: user is not defined
+2023-09-23T02:10:22.579Z error: Error fetching user: user is not defined
+2023-09-23T02:10:26.279Z error: Error fetching user: user is not defined
+2023-09-23T02:12:06.949Z error: Error fetching user: user is not defined
+2023-09-23T02:13:25.617Z error: Error fetching user: user is not defined
+2023-09-23T02:13:58.939Z error: Error fetching user: user is not defined
+2023-09-23T02:13:59.593Z error: Error fetching user: user is not defined
+2023-09-23T02:17:40.760Z error: Error fetching user: user is not defined
+2023-09-23T02:20:16.242Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:29:35.718Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:35:26.659Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:38:23.510Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:49:50.626Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:53:17.711Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T02:55:26.272Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:04:24.211Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:23:48.569Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:26:12.433Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:28:43.423Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:29:10.303Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:33:24.568Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:41:35.125Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T03:56:47.140Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T17:40:17.495Z error: Error fetching user: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-23T17:40:18.277Z error: Error fetching user: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-23T17:50:48.823Z error: Error fetching product: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-23T17:54:54.779Z error: Error fetching product: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-23T17:55:08.954Z error: Error fetching product: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-23T18:35:42.005Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-23T19:08:39.157Z error: Error fetching product: Cast to ObjectId failed for value "nuevoProducto" (type string) at path "_id" for model "products"
+2023-09-23T19:09:06.036Z error: Error fetching product: Cast to ObjectId failed for value "chat" (type string) at path "_id" for model "products"
+2023-09-23T19:56:30.065Z error: Error fetching product: Cast to ObjectId failed for value "nuevoProducto" (type string) at path "_id" for model "products"
+2023-09-25T19:32:48.334Z error: Error fetching user: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-25T19:52:24.999Z error: Error fetching product: Cast to ObjectId failed for value "product-details" (type string) at path "_id" for model "products"
+2023-09-26T01:13:43.592Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:13:59.070Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:14:00.540Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:14:16.806Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:14:21.451Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:14:30.635Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:14:54.816Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:15:28.492Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T01:15:32.655Z error: Error finding products: productsService.findAllProducts(...).lean is not a function
+2023-09-26T03:05:35.445Z error: Error fetching product: Cast to ObjectId failed for value "nuevoProducto" (type string) at path "_id" for model "products"
+2023-09-26T03:18:12.652Z error: Error fetching product: Cast to ObjectId failed for value "nuevoProducto" (type string) at path "_id" for model "products"
+2023-09-26T03:48:36.410Z error: Error fetching product: logger.warn is not a function
+2023-09-26T05:07:34.162Z error: Error finding product: logger.warn is not a function
+2023-09-26T05:08:41.966Z error: Error finding product: logger.warn is not a function
+2023-09-26T05:25:08.727Z error: Error finding product: logger.warn is not a function
+2023-09-26T05:28:38.986Z error: Error finding product: logger.warn is not a function
+2023-09-26T05:31:44.937Z error: Error finding product: logger.warn is not a function
+2023-09-26T05:33:32.707Z error: Error finding product: logger.warn is not a function
+2023-09-26T16:48:57.289Z error: Error creating cart for user:
+2023-09-26T16:50:03.344Z error: Error creating cart for user:
+2023-09-26T16:55:40.095Z error: Error creating cart for user:
+2023-09-26T16:58:12.492Z error: Error creating cart for user:
+2023-09-26T21:27:03.749Z error: Error al crear carrito para el usuario:
+2023-09-27T13:57:36.914Z error: Error al crear carrito para el usuario:
+2023-09-27T13:57:49.470Z error: Error al crear carrito para el usuario:
+2023-09-27T13:59:26.493Z error: Error al crear carrito para el usuario:
+2023-09-27T14:03:05.308Z error: Error al crear carrito para el usuario:
+2023-09-27T14:06:24.383Z error: Error al crear carrito para el usuario:
+2023-09-27T14:24:41.561Z error: Error al crear carrito para el usuario:
+2023-09-27T14:25:12.430Z error: Error al crear carrito para el usuario:
+2023-09-27T14:25:26.902Z error: Error al crear carrito para el usuario:
+2023-09-27T14:33:43.014Z error: Error al crear carrito para el usuario:
+2023-09-27T14:34:53.560Z error: Error al crear carrito para el usuario:
+2023-09-27T14:39:09.463Z error: Error al crear carrito para el usuario:
+2023-09-27T14:48:09.034Z error: Error al crear carrito para el usuario:
+2023-09-27T14:49:48.264Z error: Error al crear carrito para el usuario:
+2023-09-27T15:38:19.913Z error: Error creating cart for user:
+2023-09-27T16:04:15.358Z error: Error creating cart for user:
+2023-09-27T16:10:17.405Z error: Error creating cart for user:
+2023-09-27T17:04:11.319Z error: Error finding cart:
+2023-09-27T17:07:48.475Z error: Error finding cart:
+2023-09-27T17:11:30.248Z error: Error finding cart:
+2023-09-27T17:13:24.707Z error: Error finding cart:
+2023-09-27T17:30:26.959Z error: Error finding cart:
+2023-09-27T17:57:08.813Z error: Error finding cart:
+2023-09-27T18:01:03.872Z error: Error finding cart:
+2023-09-27T18:05:34.523Z error: Error finding cart:
+2023-09-27T19:17:47.772Z error: Error finding cart:
+2023-09-27T20:16:54.241Z error: Error finding cart:
+2023-09-27T20:33:17.708Z error: Error updating product quantity in cart:
+2023-09-27T20:37:40.780Z error: Error updating cart:
+2023-09-27T20:40:19.702Z error: Error updating cart:
+2023-09-27T20:42:35.244Z error: Error updating cart:
+2023-09-27T20:44:37.692Z error: Error updating cart:
+2023-09-27T20:49:00.703Z error: Error updating cart:
+2023-09-27T20:54:08.206Z error: Error updating cart:
+2023-09-27T21:02:19.399Z error: Error updating cart:
+2023-09-27T21:04:56.144Z error: Error deleting cart:
+2023-09-27T21:18:16.661Z error: Error updating cart:
+2023-09-27T21:19:04.200Z error: Error updating cart:
+2023-09-27T21:22:45.319Z error: Error finding products: cid is not defined
+2023-09-27T21:22:57.980Z error: Error finding products: cid is not defined
+2023-09-27T21:37:21.960Z error: Error finding products: cid is not defined
+2023-09-27T21:37:29.073Z error: Error finding products: cid is not defined
+2023-09-27T21:52:06.829Z error: Error finding products: c is not defined
+2023-09-28T00:30:15.555Z error: Error finding products: Cannot access 'cid' before initialization
+2023-09-28T00:31:47.545Z error: Error finding products: Cannot access 'cid' before initialization
+2023-09-28T15:19:58.330Z error: Error finding products: cid is not defined
+2023-09-28T15:22:45.327Z error: Error finding products: cid is not defined
+2023-09-28T17:01:20.347Z error: Error adding product to cart:
+2023-09-28T17:05:46.043Z error: Error adding product to cart:
+2023-09-28T20:10:06.962Z error: Error finding product: logger.warn is not a function

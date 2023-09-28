@@ -1,0 +1,251 @@
+paths:
+  /api/cart/{cid}:
+    get:
+      summary: Obtener un carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito a obtener
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Carrito obtenido exitosamente por ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cart'
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizar un carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito a actualizar
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCart'
+      responses:
+        "200":
+          description: Carrito actualizado exitosamente por ID
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: Eliminar un carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito a eliminar
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Carrito eliminado exitosamente por ID
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+
+  /api/cart:
+    post:
+      summary: Crear un nuevo carrito
+      tags:
+        - Carrito
+      responses:
+        "200":
+          description: Carrito creado exitosamente
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+
+  /api/cart/{cid}/product/{pid}:
+    post:
+      summary: Agregar un producto a un carrito
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto a agregar
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddProduct'
+      responses:
+        "200":
+          description: Producto agregado exitosamente al carrito
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: Eliminar un producto de un carrito
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto a eliminar
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Producto eliminado exitosamente del carrito
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizar la cantidad de un producto en un carrito
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto a actualizar
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateProductQuantity'
+      responses:
+        "200":
+          description: Cantidad del producto en el carrito actualizada exitosamente
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+          
+  /api/cart/{cid}/purchase:
+    post:
+      summary: Procesar la compra de un carrito
+      tags:
+        - Carrito
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito a procesar
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Compra procesada exitosamente
+        "400":
+          description: Formato de cuerpo inválido
+        "500":
+          description: Error interno del servidor
+
+components:
+  schemas:
+    Cart:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Autogenerated MongoDB ID
+        products:
+          type: array
+          description: Lista de productos en el carrito
+          items:
+            type: object
+            properties:
+              id_prod:
+                type: string
+                description: ID del producto
+              cant:
+                type: number
+                description: Cantidad del producto en el carrito
+      example:
+        _id: ObjectId(123abc456efg)
+        products:
+          - id_prod: ObjectId(789def012ghi)
+            cant: 2
+          - id_prod: ObjectId(345jkl678mno)
+            cant: 1
+
+    AddProduct:
+      type: object
+      properties:
+        quantity:
+          type: number
+          description: Cantidad del producto a agregar al carrito
+      example:
+        quantity: 3
+
+    UpdateCart:
+      type: object
+      properties:
+        products:
+          type: array
+          description: Lista actualizada de productos en el carrito
+          items:
+            type: object
+            properties:
+              id_prod:
+                type: string
+                description: ID del producto
+              cant:
+                type: number
+                description: Cantidad del producto en el carrito
+      example:
+        products:
+          - id_prod: ObjectId(789def012ghi)
+            cant: 2
+          - id_prod: ObjectId(345jkl678mno)
+            cant: 1
+
+    UpdateProductQuantity:
+      type: object
+      properties:
+        quantity:
+          type: number
+          description: Nueva cantidad del producto en el carrito
