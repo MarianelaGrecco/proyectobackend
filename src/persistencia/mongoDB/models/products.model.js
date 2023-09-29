@@ -1,5 +1,5 @@
-
 import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
 const productSchema = new Schema({
   title: {
@@ -31,9 +31,14 @@ const productSchema = new Schema({
     type: Boolean,
     default: true,
   },
+  pid: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    unique: true,
+    default: () => new mongoose.Types.ObjectId().toHexString(),
+  },
   thumbnail: [],
 });
 
 const productsModel = model("products", productSchema);
-export default productsModel
-
+export default productsModel;

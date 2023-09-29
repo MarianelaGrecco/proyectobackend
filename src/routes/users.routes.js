@@ -1,54 +1,15 @@
 import { Router } from 'express';
-import upload from '../multerMiddlewere.js';
-import usersModel from '../persistencia/mongoDB/models/users.model.js';
-import { hashData, compareData } from '../utils/bcrypt.js';
+import { createOneUser, findAllUsers, findOneUser, updatePremiumStatus, userProfile } from '../controllers/users.controller.js';
 import passport from 'passport';
-import logger from '../utils/logger.js';
-import { usersService } from '../services/users.service.js';
-import { updatePremiumStatus, userProfile } from '../controllers/users.controller.js';
 
 const userRouter = Router();
 
 // Agregar logger a los métodos existentes
-userRouter.get('/', async (req, res) => {
-  try {
-    logger.info('All users fetched successfully:', users);
-    res.status(200).send(users);
-  } catch (error) {
-    logger.error('Error fetching all users:', error);
-    res.status(400).send(error);
-  }
-});
+userRouter.get('/', findAllUsers);
 
-userRouter.get('/:uid', async (req, res) => {
-  try {
-    const userUid = req.params.uid;
-    const user = await usersModel.findOne({ uid: userUid });
+userRouter.get('/:uid', findOneUser);
 
-    if (user) {
-      logger.info('User found:', user);
-      res.status(200).send(user);
-    } else {
-      logger.warn('User not found with UID:', userUid);
-      res.status(404).send('User not found');
-    }
-  } catch (error) {
-    logger.error('Error fetching user:', error);
-    res.status(400).send(error);
-  }
-});
-
-
-
-userRouter.post('/', async (req, res) => {
-  try {
-    logger.info('New user created successfully:', newUser);
-    res.send(newUser);
-  } catch (error) {
-    logger.error('Error creating user:', error);
-    res.status(400).send(error);
-  }
-});
+userRouter.post('/', createOneUser);
 
 // persistencia mongo
 userRouter.post('/signup', async (req, res) => {
@@ -101,31 +62,31 @@ userRouter.post(
 userRouter.put('/premium/:uid', updatePremiumStatus);
 
 
-// Ruta para subir documentos
-userRouter.post('/:uid/documents', upload.array('documents'), async (req, res) => {
-  const { uid } = req.params;
+// // Ruta para subir documentos
+// userRouter.post('/:uid/documents', upload.array('documents'), async (req, res) => {
+//   const { uid } = req.params;
 
-  try {
-    const user = await usersModel.findOne({ uid });
+//   try {
+//     const user = await usersModel.findOne({ uid });
 
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
+//     if (!user) {
+//       return res.status(404).json({ message: 'User not found' });
+//     }
 
-    // Actualizar el estado del usuario para indicar que ha subido un documento
-    user.documents.push(...req.files.map((file) => ({
-      name: file.originalname,
-      reference: file.path, // Usamos file.path para guardar la referencia al archivo
-    })));
-    await user.save();
+//     // Actualizar el estado del usuario para indicar que ha subido un documento
+//     user.documents.push(...req.files.map((file) => ({
+//       name: file.originalname,
+//       reference: file.path, // Usamos file.path para guardar la referencia al archivo
+//     })));
+//     await user.save();
 
-    logger.info('Document uploaded successfully');
-    res.status(200).json({ message: 'Document uploaded successfully' });
-  } catch (error) {
-    logger.error('Error uploading document:', error);
-    res.status(500).json({ error });
-  }
-});
+//     logger.info('Document uploaded successfully');
+//     res.status(200).json({ message: 'Document uploaded successfully' });
+//   } catch (error) {
+//     logger.error('Error uploading document:', error);
+//     res.status(500).json({ error });
+//   }
+// });
 
 userRouter.get('/logout', async (req, res) => {
   try {

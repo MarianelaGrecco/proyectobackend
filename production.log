@@ -972,3 +972,99 @@
 2023-09-28T21:33:19.979Z info: Server on port 4000
 2023-09-28T21:33:39.691Z info: Products found:
 2023-09-28T21:34:53.520Z info: Products found:
+2023-09-28T22:05:48.037Z info: Logger instance:
+2023-09-28T22:05:48.143Z info: Server on port 4000
+2023-09-28T22:05:51.029Z info: Products found:
+2023-09-28T22:07:53.319Z error: Error fetching user: Cast to ObjectId failed for value "login" (type string) at path "uid" for model "Users"
+2023-09-28T22:08:38.401Z info: New user signed up successfully:
+2023-09-28T23:01:50.480Z info: Logger instance:
+2023-09-28T23:01:50.711Z info: Server on port 4000
+2023-09-28T23:03:06.257Z info: Products found:
+2023-09-28T23:03:11.105Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "uid" for model "Users"
+2023-09-28T23:03:18.442Z info: Products found:
+2023-09-28T23:03:32.432Z info: Products found:
+2023-09-28T23:09:05.951Z info: Logger instance:
+2023-09-28T23:09:06.111Z info: Server on port 4000
+2023-09-28T23:09:38.777Z info: Logger instance:
+2023-09-28T23:09:38.922Z info: Server on port 4000
+2023-09-28T23:09:58.637Z info: Products found:
+2023-09-28T23:22:43.086Z info: Logger instance:
+2023-09-28T23:22:43.203Z info: Server on port 4000
+2023-09-28T23:22:50.027Z info: Products found:
+2023-09-28T23:49:00.262Z info: Logger instance:
+2023-09-28T23:49:00.377Z info: Server on port 4000
+2023-09-28T23:51:02.564Z info: Users found:
+2023-09-28T23:54:18.672Z info: Logger instance:
+2023-09-28T23:54:18.801Z info: Server on port 4000
+2023-09-28T23:54:22.863Z info: Logger instance:
+2023-09-28T23:54:23.002Z info: Server on port 4000
+2023-09-28T23:55:22.444Z error: Error finding user: usersService.inOneUser is not a function
+2023-09-28T23:56:23.016Z info: Logger instance:
+2023-09-28T23:56:23.128Z info: Server on port 4000
+2023-09-28T23:56:35.098Z error: Error finding user: usersService.inOneUser is not a function
+2023-09-28T23:56:59.052Z info: Logger instance:
+2023-09-28T23:56:59.235Z info: Server on port 4000
+2023-09-28T23:57:02.663Z info: User found:
+2023-09-29T00:07:00.317Z info: Logger instance:
+2023-09-29T00:07:00.467Z info: Server on port 4000
+2023-09-29T00:07:22.961Z info: Logger instance:
+2023-09-29T00:07:23.074Z info: Server on port 4000
+2023-09-29T00:10:07.958Z info: User created:
+2023-09-29T00:11:00.638Z info: Logger instance:
+2023-09-29T00:11:00.738Z info: Server on port 4000
+2023-09-29T00:15:16.948Z info: Logger instance:
+2023-09-29T00:15:17.077Z info: Server on port 4000
+2023-09-29T00:15:21.123Z info: Logger instance:
+2023-09-29T00:15:21.240Z info: Server on port 4000
+2023-09-29T00:18:12.561Z info: Logger instance:
+2023-09-29T00:18:12.669Z info: Server on port 4000
+2023-09-29T00:18:14.593Z info: User created:
+2023-09-29T00:21:39.216Z info: Logger instance:
+2023-09-29T00:21:39.346Z info: Server on port 4000
+2023-09-29T00:24:11.368Z info: Logger instance:
+2023-09-29T00:24:11.586Z info: Server on port 4000
+2023-09-29T00:30:03.755Z info: Logger instance:
+2023-09-29T00:30:03.872Z info: Server on port 4000
+2023-09-29T00:34:24.310Z info: Product created: products validation failed: pid: mongoose is not defined
+2023-09-29T00:39:09.534Z info: Logger instance:
+2023-09-29T00:39:09.649Z info: Server on port 4000
+2023-09-29T00:39:31.554Z info: Product created: products validation failed: pid: mongoose is not defined
+2023-09-29T01:11:56.397Z info: Product created: products validation failed: pid: mongoose is not defined
+2023-09-29T01:14:03.981Z info: Logger instance:
+2023-09-29T01:14:04.147Z info: Server on port 4000
+2023-09-29T01:14:36.620Z info: Product created: products validation failed: pid: mongoose is not defined
+2023-09-29T01:16:50.484Z info: Logger instance:
+2023-09-29T01:16:50.589Z info: Server on port 4000
+2023-09-29T01:17:04.262Z info: Product created:
+2023-09-29T01:17:51.229Z info: Products found:
+2023-09-29T01:18:37.898Z info: Logger instance:
+2023-09-29T01:18:38.053Z info: Server on port 4000
+2023-09-29T01:18:43.504Z info: Products found:
+2023-09-29T01:30:11.177Z info: Logger instance:
+2023-09-29T01:30:11.376Z info: Server on port 4000
+2023-09-29T01:31:14.949Z info: Cart created for user:
+2023-09-29T01:31:57.147Z info: Products found:
+2023-09-29T01:36:24.923Z info: Products found:
+2023-09-29T01:49:50.871Z info: Logger instance:
+2023-09-29T01:49:50.985Z info: Server on port 4000
+2023-09-29T01:50:04.255Z info: Products found:
+2023-09-29T01:52:31.033Z info: Products found:
+2023-09-29T01:56:34.847Z info: Logger instance:
+2023-09-29T01:56:34.959Z info: Server on port 4000
+2023-09-29T01:56:48.006Z info: Products found:
+2023-09-29T01:58:47.243Z info: Logger instance:
+2023-09-29T01:58:47.360Z info: Server on port 4000
+2023-09-29T02:05:05.377Z info: Logger instance:
+2023-09-29T02:05:05.599Z info: Server on port 4000
+2023-09-29T02:05:13.180Z info: Products found:
+2023-09-29T02:09:53.631Z info: Logger instance:
+2023-09-29T02:09:53.733Z info: Server on port 4000
+2023-09-29T02:10:30.714Z info: Logger instance:
+2023-09-29T02:10:30.824Z info: Server on port 4000
+2023-09-29T02:18:27.008Z info: Product created:
+2023-09-29T02:19:04.496Z info: Product created:
+2023-09-29T02:22:08.443Z info: Logger instance:
+2023-09-29T02:22:08.552Z info: Server on port 4000
+2023-09-29T02:22:16.022Z info: Products found:
+2023-09-29T02:23:47.830Z info: Products found:
+2023-09-29T02:24:03.852Z info: Products found:

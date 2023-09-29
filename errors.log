@@ -119,3 +119,7 @@
 2023-09-28T17:01:20.347Z error: Error adding product to cart:
 2023-09-28T17:05:46.043Z error: Error adding product to cart:
 2023-09-28T20:10:06.962Z error: Error finding product: logger.warn is not a function
+2023-09-28T22:07:53.319Z error: Error fetching user: Cast to ObjectId failed for value "login" (type string) at path "uid" for model "Users"
+2023-09-28T23:03:11.105Z error: Error fetching user: Cast to ObjectId failed for value "logout" (type string) at path "uid" for model "Users"
+2023-09-28T23:55:22.444Z error: Error finding user: usersService.inOneUser is not a function
+2023-09-28T23:56:35.098Z error: Error finding user: usersService.inOneUser is not a function

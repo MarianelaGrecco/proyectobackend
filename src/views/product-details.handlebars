@@ -6,7 +6,7 @@
   <p>Categoría: {{product.category}}</p>
   <p>Descripción: {{product.description}}</p>
 
-  <form action="/cart/{{session.cid}}/products/{{session.pid}}" method="POST">
+  <form action="/cart/{{cid}}/products/{{pid}}" method="POST">
     <input type="number" name="quantity" value="1">
     <button type="submit">Agregar al carrito</button>
   </form>

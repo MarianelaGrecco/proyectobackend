@@ -2,7 +2,6 @@ import { productsService } from "../services/products.service.js";
 import logger from "../utils/logger.js";
 
 export const findAllProducts = async (req, res) => {
- 
   try {
     const products = await productsService.findAllProducts();
     logger.info("Products found:", products); 
@@ -24,31 +23,15 @@ export const findAllProducts = async (req, res) => {
   }
 };
 
-export const showProductDetails = async (req, res) => {
-  const { cid, pid } = req.params;
-  try {
-    const product = await productsService.showProductDetails(cid, pid);
-    
-    if (!product) {
-      return res.status(404).send("Producto no encontrado");
-    }
-    res.render("product-details", {product, cid});
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error al buscar el producto" });
-  }
-};
-
-
 
 export const findOneProduct = async (req, res) => {
   const { pid } = req.params;
+  console.log("Product ID:", pid);
   try {
-    console.log("Product ID:", pid);
     const products = await productsService.findOneProduct(pid);
     if (products) {
       logger.info("Product found:", products);
-      res.render("products", { products, pid });
+      res.render("product-detail", { products, pid });
     } else {
       logger.warn("Product not found");
       res.status(404).json({ message: "Product not found" });

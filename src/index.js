@@ -105,7 +105,8 @@ app.engine('handlebars',  exphbs());
 app.set('views', path.resolve(__dirname, './views'));
 app.set('view engine', 'handlebars');
 
-//Configura body-parser
+// Configurar body parser
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Cookie

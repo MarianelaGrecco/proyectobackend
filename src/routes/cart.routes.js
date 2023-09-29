@@ -14,7 +14,7 @@ const cartRouter = Router();
 
 // Rutas base para el carrito
 cartRouter.get("/:cid", findOneCart);
-cartRouter.post("/", createCart);
+cartRouter.post("/:uid", createCart);
 
 // Rutas relacionadas con productos en el carrito
 cartRouter.post("/:cid/products/:pid", addProductToCart);

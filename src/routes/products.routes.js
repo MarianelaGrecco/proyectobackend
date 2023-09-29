@@ -1,11 +1,9 @@
 import { Router } from "express";
-import { createOneProduct, findAllProducts, findOneProduct, updateOneProduct, deleteOneProduct, showProductDetails } from "../controllers/products.controller.js";
+import { createOneProduct, findAllProducts, findOneProduct, updateOneProduct, deleteOneProduct} from "../controllers/products.controller.js";
 
 const productsRouter = Router();
 
 productsRouter.get("/", findAllProducts);
-
-productsRouter.get("/:cid/:pid", showProductDetails);
 
 productsRouter.get("/:pid", findOneProduct);
 

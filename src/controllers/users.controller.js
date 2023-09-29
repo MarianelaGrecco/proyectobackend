@@ -3,7 +3,7 @@ import logger from "../utils/logger.js";
 
 export const findAllUsers = async (req, res) => {
   try {
-    const users = await usersService.findAll();
+    const users = await usersService.findAllUsers();
     if (users.length) {
       logger.info("Users found:", users);
       res.status(200).json({ message: "Users found", users });
@@ -16,25 +16,11 @@ export const findAllUsers = async (req, res) => {
     res.status(500).json({ error });
   }
 };
-export const userProfile = async (req, res) => {
-  try {
-    // Aquí debes obtener la información del usuario desde tu base de datos o servicio.
-    // Por ejemplo, asumiendo que tienes una función en tu servicio llamada `getUserProfileData` que obtiene los datos del usuario:
-    const userData = await usersService.userProfileData(req.user._id);
-
-    // Luego, renderiza la vista "perfil" y pasa los datos del usuario como contexto
-    res.render("perfil", { first_name: userData.first_name });
-  } catch (error) {
-    logger.error("Error fetching user profile:", error);
-    res.status(500).json({ error });
-  }
-};
-
 
 export const findOneUser = async (req, res) => {
-  const { id } = req.params;
+  const { uid } = req.params;
   try {
-    const user = await usersService.findById(id);
+    const user = await usersService.finOneUser(uid);
     if (user) {
       logger.info("User found:", user);
       res.status(200).json({ message: "User found", user });
@@ -50,28 +36,43 @@ export const findOneUser = async (req, res) => {
 
 export const createOneUser = async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
-  if (!first_name || !last_name || !email || !password) {
-    return res.status(400).json({ message: "Data missing" });
-  }
-
-  const newUser = new usersModel({
-    first_name,
-    last_name,
-    email,
-    password,
-  });
-
+  
   try {
-    const createdUser = await newUser.save();
+    // Validación de datos
+    if (!first_name || !last_name || !email || !password) {
+      return res.status(400).json({ message: "Missing required data" });
+    }
+    
+    // Llama al userService para crear el usuario
+    const createdUser = await usersService.createOneUser({
+      first_name,
+      last_name,
+      email,
+      password,
+    });
+
     logger.info("User created:", createdUser);
     res.status(200).json({ message: "User created", user: createdUser });
   } catch (error) {
     logger.error("Error creating user:", error);
-    res.status(500).json({ error });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
 
 
+export const userProfile = async (req, res) => {
+  try {
+    // Aquí debes obtener la información del usuario desde tu base de datos o servicio.
+    // Por ejemplo, asumiendo que tienes una función en tu servicio llamada `getUserProfileData` que obtiene los datos del usuario:
+    const userData = await usersService.userProfileData(req.user._id);
+
+    // Luego, renderiza la vista "perfil" y pasa los datos del usuario como contexto
+    res.render("perfil", { first_name: userData.first_name });
+  } catch (error) {
+    logger.error("Error fetching user profile:", error);
+    res.status(500).json({ error });
+  }
+};
 
 //actualizar usuario premium
 export const updatePremiumStatus = async (req, res) => {
