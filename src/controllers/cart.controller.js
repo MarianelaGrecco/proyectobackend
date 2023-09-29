@@ -1,5 +1,6 @@
 import { cartService } from "../services/cart.service.js";
 import logger from "../utils/logger.js";
+import mongoose from "mongoose";
 
 // Crear un nuevo carrito
 export const createCart = async (req, res) => {
@@ -36,8 +37,11 @@ export const findOneCart = async (req, res) => {
 };
 
 // Agregar un producto al carrito
+
 export const addProductToCart = async (req, res) => {
-  const { cid, pid, quantity } = req.body;
+  const { cid, pid } = req.params;
+  const { quantity } = req.body;
+
   console.log("Adding product to cart:", cid, pid, quantity);
   if (!quantity) {
     logger.warning("Missing information to add the product to the cart:", req.body);
@@ -47,12 +51,13 @@ export const addProductToCart = async (req, res) => {
     console.log("Inside try block");
     const updatedCart = await cartService.addProductToCart(cid, pid, quantity);
     logger.info("Product added to cart:", pid, "in cart:", cid);
-    res.status(200).json({ message: "Product added to cart", cart: updatedCart });
+    res.redirect(`/cart/${cid}`);
   } catch (error) {
     logger.error("Error adding product to cart:", pid, "in cart:", cid, error);
     res.status(500).json({ error });
   }
 };
+
 
 // Eliminar un producto del carrito
 export const removeProductFromCart = async (req, res) => {

@@ -150,8 +150,6 @@ io.on("connection", (socket) => {
   });
 });
 
-//passport
-app.use(passport.initialize());
 
 //sessions
 app.use(session({
@@ -165,6 +163,10 @@ app.use(session({
   cookie: {maxAge: 60000}
 })
 )
+
+//passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Routes
 app.use("/api/products", productsRouter);

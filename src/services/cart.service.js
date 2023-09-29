@@ -24,9 +24,20 @@ class CartService {
       // Obtén el carrito por su ID
       const cart = await cartMongo.findOneById(cid);
       console.log("Cart before adding product:", cart);
+      if (!cart) {
+        // Puedes manejar esto de la manera que prefieras, por ejemplo, lanzando un error o creando un nuevo carrito.
+        console.log("Cart not found");
+        // Lanza un error, por ejemplo
+        throw new Error("Cart not found");
+      }
+
+      // Verificar e inicializar cart.products si es necesario
+    if (!cart.products) {
+      cart.products = [];
+    }
   
       // Verifica si el producto ya existe en el carrito
-      const existingProduct = cart.products.find((product) => product.pid === pid);
+      const existingProduct = cart.products.find((products) => products.pid === pid);
       console.log("Existing product:", existingProduct);
   
       if (existingProduct) {

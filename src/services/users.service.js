@@ -32,6 +32,24 @@ class UsersService {
     }
   }
 
+  async userProfileData(id) {
+    try {
+      const logout = await usersMongo.findOneById(id);
+      return logout;
+    } catch (error) {
+      throw error;
+    }
+  }
+  
+  async logoutUser() {
+    try {
+      return { message: 'Logout successful' };
+    } catch (error) {
+      throw error;
+    }
+  }
+
+
   async deleteOneUser(id) {
     try {
       const response = await usersMongo.deleteOne(id);

@@ -1068,3 +1068,174 @@
 2023-09-29T02:22:16.022Z info: Products found:
 2023-09-29T02:23:47.830Z info: Products found:
 2023-09-29T02:24:03.852Z info: Products found:
+2023-09-29T14:01:18.401Z info: Logger instance:
+2023-09-29T14:01:18.525Z info: Server on port 4000
+2023-09-29T14:01:36.630Z info: Products found:
+2023-09-29T14:14:50.743Z info: Logger instance:
+2023-09-29T14:14:50.849Z info: Server on port 4000
+2023-09-29T14:15:57.519Z info: Logger instance:
+2023-09-29T14:15:57.630Z info: Server on port 4000
+2023-09-29T14:16:03.286Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T14:18:00.215Z info: User created:
+2023-09-29T14:21:34.895Z info: Logger instance:
+2023-09-29T14:21:35.157Z info: Server on port 4000
+2023-09-29T14:22:38.371Z info: User created:
+2023-09-29T14:23:24.654Z info: Logger instance:
+2023-09-29T14:23:24.783Z info: Server on port 4000
+2023-09-29T14:23:42.409Z info: User created:
+2023-09-29T14:24:15.700Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T14:24:16.670Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T14:24:31.402Z info: User found: Cast to ObjectId failed for value "profile" (type string) at path "_id" for model "Users"
+2023-09-29T14:34:30.735Z info: Logger instance:
+2023-09-29T14:34:30.883Z info: Server on port 4000
+2023-09-29T14:34:34.317Z info: User found: Cast to ObjectId failed for value "profile" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:48.358Z info: Logger instance:
+2023-09-29T14:35:48.526Z info: Server on port 4000
+2023-09-29T14:35:48.603Z info: User found: Cast to ObjectId failed for value "profile" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:51.912Z info: User found: Cast to ObjectId failed for value "profile" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:53.103Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:54.693Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:57.499Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T14:35:57.931Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T14:37:13.902Z info: Logger instance:
+2023-09-29T14:37:14.008Z info: Server on port 4000
+2023-09-29T14:37:20.883Z info: Logger instance:
+2023-09-29T14:37:20.996Z info: Server on port 4000
+2023-09-29T14:37:35.347Z info: Products found:
+2023-09-29T14:40:03.196Z info: Logger instance:
+2023-09-29T14:40:03.323Z info: Server on port 4000
+2023-09-29T14:40:21.312Z info: Logger instance:
+2023-09-29T14:40:21.410Z info: Server on port 4000
+2023-09-29T14:41:27.344Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T14:41:41.026Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T14:41:52.681Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T14:41:53.667Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T14:42:41.287Z info: User created:
+2023-09-29T15:02:06.783Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-09-29T15:02:08.025Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T15:02:08.421Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-09-29T15:02:10.057Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T15:02:15.968Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T15:02:17.620Z info: Products found:
+2023-09-29T15:02:21.284Z info: Products found:
+2023-09-29T15:04:57.494Z info: Logger instance:
+2023-09-29T15:04:57.634Z info: Server on port 4000
+2023-09-29T15:06:14.364Z info: Logger instance:
+2023-09-29T15:06:14.468Z info: Server on port 4000
+2023-09-29T15:19:22.278Z info: Logger instance:
+2023-09-29T15:19:22.454Z info: Server on port 4000
+2023-09-29T15:19:33.490Z info: Products found:
+2023-09-29T15:23:57.390Z info: Logger instance:
+2023-09-29T15:23:57.519Z info: Server on port 4000
+2023-09-29T15:27:42.950Z info: Logger instance:
+2023-09-29T15:27:43.049Z info: Server on port 4000
+2023-09-29T15:28:49.706Z info: Logger instance:
+2023-09-29T15:28:49.817Z info: Server on port 4000
+2023-09-29T15:29:26.264Z info: Logger instance:
+2023-09-29T15:29:26.373Z info: Server on port 4000
+2023-09-29T15:32:06.059Z info: Logger instance:
+2023-09-29T15:32:06.166Z info: Server on port 4000
+2023-09-29T15:32:40.597Z info: Logger instance:
+2023-09-29T15:32:40.755Z info: Server on port 4000
+2023-09-29T15:34:45.373Z info: Logger instance:
+2023-09-29T15:34:45.503Z info: Server on port 4000
+2023-09-29T15:39:21.613Z info: Logger instance:
+2023-09-29T15:39:21.766Z info: Server on port 4000
+2023-09-29T15:41:21.620Z info: Logger instance:
+2023-09-29T15:41:21.730Z info: Server on port 4000
+2023-09-29T15:41:45.587Z info: Products found:
+2023-09-29T15:48:09.170Z info: Logger instance:
+2023-09-29T15:48:09.276Z info: Server on port 4000
+2023-09-29T15:48:16.358Z info: Logger instance:
+2023-09-29T15:48:16.540Z info: Server on port 4000
+2023-09-29T15:48:27.020Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T15:52:04.071Z info: Logger instance:
+2023-09-29T15:52:04.208Z info: Server on port 4000
+2023-09-29T15:52:11.403Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T15:52:39.506Z info: User created:
+2023-09-29T15:52:42.345Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:06:17.127Z info: Logger instance:
+2023-09-29T16:06:17.235Z info: Server on port 4000
+2023-09-29T16:06:25.846Z info: Logger instance:
+2023-09-29T16:06:25.956Z info: Server on port 4000
+2023-09-29T16:06:40.014Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:09:19.462Z info: Logger instance:
+2023-09-29T16:09:19.583Z info: Server on port 4000
+2023-09-29T16:09:25.668Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:19:07.518Z info: Logger instance:
+2023-09-29T16:19:07.648Z info: Server on port 4000
+2023-09-29T16:19:13.916Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:20:43.478Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:24:10.071Z info: Logger instance:
+2023-09-29T16:24:10.178Z info: Server on port 4000
+2023-09-29T16:24:19.866Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:24:28.215Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:26:11.343Z info: Logger instance:
+2023-09-29T16:26:11.504Z info: Server on port 4000
+2023-09-29T16:26:13.841Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:28:19.474Z info: Logger instance:
+2023-09-29T16:28:19.631Z info: Server on port 4000
+2023-09-29T16:28:21.609Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:28:41.141Z info: Logger instance:
+2023-09-29T16:28:41.299Z info: Server on port 4000
+2023-09-29T16:28:43.973Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:53:22.112Z info: Logger instance:
+2023-09-29T16:53:22.233Z info: Server on port 4000
+2023-09-29T16:53:29.453Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T16:55:05.739Z info: Products found:
+2023-09-29T17:01:49.654Z info: Logger instance:
+2023-09-29T17:01:49.767Z info: Server on port 4000
+2023-09-29T17:01:56.756Z info: Products found:
+2023-09-29T17:04:15.892Z info: Logger instance:
+2023-09-29T17:04:16.002Z info: Server on port 4000
+2023-09-29T17:04:18.064Z info: Products found:
+2023-09-29T17:04:31.162Z info: Products found:
+2023-09-29T17:04:47.029Z info: Logger instance:
+2023-09-29T17:04:47.136Z info: Server on port 4000
+2023-09-29T17:13:02.866Z info: Logger instance:
+2023-09-29T17:13:03.003Z info: Server on port 4000
+2023-09-29T17:13:59.440Z info: Products found:
+2023-09-29T17:19:41.701Z warning: Missing information to add the product to the cart:
+2023-09-29T17:20:38.254Z warning: Missing information to add the product to the cart:
+2023-09-29T17:31:14.302Z info: Logger instance:
+2023-09-29T17:31:14.406Z info: Server on port 4000
+2023-09-29T18:56:19.008Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-09-29T18:57:33.323Z warning: Missing information to add the product to the cart:
+2023-09-29T19:00:29.339Z warning: Missing information to add the product to the cart:
+2023-09-29T19:02:06.700Z info: Logger instance:
+2023-09-29T19:02:06.794Z info: Server on port 4000
+2023-09-29T19:02:15.555Z error: Error adding product to cart:
+2023-09-29T19:27:35.316Z info: Logger instance:
+2023-09-29T19:27:35.441Z info: Server on port 4000
+2023-09-29T19:29:35.497Z info: Logger instance:
+2023-09-29T19:29:35.628Z info: Server on port 4000
+2023-09-29T19:29:41.537Z error: Error adding product to cart:
+2023-09-29T19:36:36.950Z info: Logger instance:
+2023-09-29T19:36:37.108Z info: Server on port 4000
+2023-09-29T19:36:40.555Z error: Error adding product to cart:
+2023-09-29T19:48:25.562Z info: Logger instance:
+2023-09-29T19:48:25.688Z info: Server on port 4000
+2023-09-29T19:48:31.313Z error: Error adding product to cart:
+2023-09-29T19:56:24.941Z info: Logger instance:
+2023-09-29T19:56:25.103Z info: Server on port 4000
+2023-09-29T19:56:31.201Z info: Logger instance:
+2023-09-29T19:56:31.323Z info: Server on port 4000
+2023-09-29T19:56:38.664Z error: Error adding product to cart:
+2023-09-29T20:03:56.502Z info: Logger instance:
+2023-09-29T20:03:56.595Z info: Server on port 4000
+2023-09-29T20:04:01.876Z error: Error adding product to cart:
+2023-09-29T20:04:41.054Z info: Product added to cart:
+2023-09-29T20:08:54.293Z info: Products found:
+2023-09-29T20:08:56.487Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T20:09:01.783Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T20:09:02.491Z info: Products found:
+2023-09-29T20:10:39.385Z info: Logger instance:
+2023-09-29T20:10:39.501Z info: Server on port 4000
+2023-09-29T20:10:42.529Z info: Logger instance:
+2023-09-29T20:10:42.680Z info: Server on port 4000
+2023-09-29T20:10:46.825Z info: Products found:
+2023-09-29T20:13:36.667Z info: Products found:
+2023-09-29T20:14:42.087Z info: Products found:
+2023-09-29T20:15:33.705Z info: Products found:
+2023-09-29T20:16:09.220Z info: Products found:
+2023-09-29T20:16:22.893Z info: Products found:

@@ -12,9 +12,9 @@
 
             <a href="/products/{{pid}}" class="btn btn-primary">Ver detalles</a>
             
-            <form method="POST" action="/cart/{{cid}}/products/{{pid}}">
-  <input type="hidden" name="cid" value="{{cid}}">
-  <input type="hidden" name="pid" value="{{pid}}">
+            <form method="POST" action="/cart/{{cid}}/products/{{id}}">
+  <input type="hidden" name="cid" value="{{cartId}}">
+  <input type="hidden" name="pid" value="{{_id}}">
   <label for="quantity">Cantidad:</label>
   <input type="number" name="quantity" value="1" min="1">
   <button type="submit" class="btn btn-success">Agregar al carrito</button>

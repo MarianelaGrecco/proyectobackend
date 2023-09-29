@@ -16,7 +16,7 @@ export const findAllProducts = async (req, res) => {
     console.log("CID:", cid);
     console.log("PID:", pid);
 
-    res.render("products", { products, cid, pid });
+    res.render("products", { products });
   } catch (error) {
     logger.error("Error finding products:", error);
     res.status(500).json({ error });

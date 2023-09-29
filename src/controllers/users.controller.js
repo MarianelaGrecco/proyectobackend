@@ -36,38 +36,29 @@ export const findOneUser = async (req, res) => {
 
 export const createOneUser = async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
-  
   try {
-    // Validación de datos
     if (!first_name || !last_name || !email || !password) {
       return res.status(400).json({ message: "Missing required data" });
     }
-    
-    // Llama al userService para crear el usuario
     const createdUser = await usersService.createOneUser({
       first_name,
       last_name,
       email,
       password,
     });
-
     logger.info("User created:", createdUser);
-    res.status(200).json({ message: "User created", user: createdUser });
+    res.render("profile", createdUser)
+    // res.status(200).json({ message: "User created", user: createdUser });
   } catch (error) {
     logger.error("Error creating user:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
 
-
 export const userProfile = async (req, res) => {
   try {
-    // Aquí debes obtener la información del usuario desde tu base de datos o servicio.
-    // Por ejemplo, asumiendo que tienes una función en tu servicio llamada `getUserProfileData` que obtiene los datos del usuario:
-    const userData = await usersService.userProfileData(req.user._id);
-
-    // Luego, renderiza la vista "perfil" y pasa los datos del usuario como contexto
-    res.render("perfil", { first_name: userData.first_name });
+    const userData = req.user_id;
+    res.render("profile", { first_name: userData.first_name });
   } catch (error) {
     logger.error("Error fetching user profile:", error);
     res.status(500).json({ error });
@@ -104,3 +95,30 @@ export const updatePremiumStatus = async (req, res) => {
 };
 
 
+export const logoutUser = async (req, res) => {
+  try {
+    if (!req.isAuthenticated()) {
+      return res.status(401).send('No estás autenticado.');
+    }
+
+    const userId = req.user._id.toSring;
+    if (userId === 'logout') {
+      req.logout();
+      return res.redirect('/');
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).send('ID de usuario no válido');
+    }
+
+    // Llamamos a la función de logout en el userService
+    const result = await usersService.logoutUser();
+
+    req.logout();
+
+    res.redirect('/');
+  } catch (error) {
+    console.error('Error en la función de logout:', error);
+    res.status(500).send('Error en el servidor');
+  }
+};

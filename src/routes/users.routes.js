@@ -1,66 +1,37 @@
-import { Router } from 'express';
-import { createOneUser, findAllUsers, findOneUser, updatePremiumStatus, userProfile } from '../controllers/users.controller.js';
-import passport from 'passport';
+import { Router } from "express";
+import {
+  createOneUser,
+  findAllUsers,
+  findOneUser,
+  logoutUser,
+  updatePremiumStatus,
+  userProfile,
+} from "../controllers/users.controller.js";
+import passport from "passport";
 
 const userRouter = Router();
 
-// Agregar logger a los métodos existentes
-userRouter.get('/', findAllUsers);
+userRouter.get("/", findAllUsers);
 
-userRouter.get('/:uid', findOneUser);
+userRouter.get("/:uid", findOneUser);
 
-userRouter.post('/', createOneUser);
+userRouter.post("/signup", createOneUser);
 
-// persistencia mongo
-userRouter.post('/signup', async (req, res) => {
-  try {
-    // Obtén los datos del usuario del cuerpo de la solicitud
-    const { first_name, last_name, email, password } = req.body;
-
-    // Realiza el hash de la contraseña
-    const hashedPassword = await hashData(password);
-
-    // Crea un nuevo usuario con la contraseña hasheada
-    const newUser = await usersService.createOneUser({
-      first_name,
-      last_name,
-      email,
-      password: hashedPassword, // Utiliza la contraseña hasheada
-    });
-
-    // Verifica si el usuario se creó exitosamente
-    if (newUser && !newUser.error) {
-      logger.info('New user signed up successfully:', newUser);
-      res.redirect('/api/views/login');
-    } else {
-      // Maneja el caso de error al crear el usuario
-      logger.error('Error signing up user:', newUser.error);
-      res.redirect('/api/views/errorSignup');
-    }
-  } catch (error) {
-    // Maneja otros errores
-    logger.error('Error signing up user:', error);
-    res.redirect('/api/views/errorSignup');
-  }
-});
-
-userRouter.get ('/perfil', userProfile);
+userRouter.get("/profile", userProfile);
 
 // Login con Passport
 userRouter.post(
-  '/login',
-  passport.authenticate('login', {
+  "/login",
+  passport.authenticate("login", {
     passReqToCallback: true,
-    failureRedirect: '/api/views/errorLogin',
-    successRedirect: '/api/views/profile',
-    failureMessage: '',
+    failureRedirect: "/api/views/errorLogin",
+    successRedirect: "/api/views/profile",
+    failureMessage: "",
   })
 );
 
-
 // Ruta para actualizar al usuario a premium si ha cargado los documentos requeridos
-userRouter.put('/premium/:uid', updatePremiumStatus);
-
+userRouter.put("/premium/:uid", updatePremiumStatus);
 
 // // Ruta para subir documentos
 // userRouter.post('/:uid/documents', upload.array('documents'), async (req, res) => {
@@ -88,53 +59,46 @@ userRouter.put('/premium/:uid', updatePremiumStatus);
 //   }
 // });
 
-userRouter.get('/logout', async (req, res) => {
-  try {
-    if (!req.isAuthenticated()) {
-      // Maneja el caso en que el usuario no esté autenticado, por ejemplo, mostrando un mensaje de error.
-      return res.status(401).send('No estás autenticado.');
-    }
+userRouter.get('/logout', logoutUser);
 
-    // Obtén el ID del usuario autenticado
-    const userId = req.user._id;
+// userRouter.get("/logout", async (req, res) => {
+//   try {
+//     if (!req.isAuthenticated()) {
+//       return res.status(401).send("No estás autenticado.");
+//     }
+//     // Obtén el ID del usuario autenticado
+//     const userId = req.user._id;
+//     if (!mongoose.Types.ObjectId.isValid(userId)) {
+//       return res.status(400).send("ID de usuario no válido");
+//     }
 
-    // Verifica si el userId es un ObjectId válido
-    if (!mongoose.Types.ObjectId.isValid(userId)) {
-      // Maneja el caso en que 'userId' no sea un ObjectId válido, por ejemplo, enviando una respuesta de error.
-      return res.status(400).send('ID de usuario no válido');
-    }
+//     const user = await usersModel.findOneById(uid);
+//     if (!user) {
+//       return res.status(404).send("Usuario no encontrado en la base de datos");
+//     }
 
-    // Realiza la búsqueda del usuario por su ID
-    const user = await usersModel.findById(userId);
+//     req.logout();
 
-    if (!user) {
-      // Maneja el caso en que el usuario no se encuentre en la base de datos
-      return res.status(404).send('Usuario no encontrado en la base de datos');
-    }
+//     res.redirect("/");
+//   } catch (error) {
+//     console.error("Error en la función de logout:", error);
+//     res.status(500).send("Error en el servidor");
+//   }
+// });
 
-    // Cierra la sesión del usuario
-    req.logout();
 
-    // Redirige al usuario a la página de inicio o a donde desees
-    res.redirect('/');
+//GitHub
+userRouter.get(
+  "/githunSingup",
+  passport.authenticate("githubSignup", { scope: ["user:email"] })
+);
 
-  } catch (error) {
-    // Maneja otros errores
-    console.error('Error en la función de logout:', error);
-    res.status(500).send('Error en el servidor');
+userRouter.get(
+  "/github",
+  passport.authenticate("githubSignup", { failureRedirect: "/login" }),
+  function (req, res) {
+    res.redirect("/api/views/profile");
   }
-});
-
-userRouter.get (
-  '/githunSingup',
-  passport.authenticate('githubSignup', {scope: ['user:email']})
-)
-
-userRouter.get('/github',
-passport.authenticate('githubSignup', {failureRedirect: '/login'}),
-function(req,res){
-  res.redirect('/api/views/profile')
-})
-
+);
 
 export default userRouter;
