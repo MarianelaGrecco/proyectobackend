@@ -9,6 +9,10 @@ viewsRouter.get ('/home', (req, res)=> {
 viewsRouter.get ('/products', (req, res)=> {
     res.render ('products')
 })
+viewsRouter.get ('/detalle', (req, res)=> {
+    res.render ('detalle')
+})
+
 viewsRouter.get ('/cart', (req, res)=> {
     res.render ('cart')
 })

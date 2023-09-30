@@ -1239,3 +1239,116 @@
 2023-09-29T20:15:33.705Z info: Products found:
 2023-09-29T20:16:09.220Z info: Products found:
 2023-09-29T20:16:22.893Z info: Products found:
+2023-09-29T20:21:36.533Z info: Logger instance:
+2023-09-29T20:21:36.657Z info: Server on port 4000
+2023-09-29T20:21:39.818Z info: Product added to cart:
+2023-09-29T20:37:15.926Z info: Logger instance:
+2023-09-29T20:37:16.021Z info: Server on port 4000
+2023-09-29T20:37:21.087Z info: Products found:
+2023-09-29T20:41:06.585Z info: Products found:
+2023-09-29T20:42:06.199Z info: Logger instance:
+2023-09-29T20:42:06.353Z info: Server on port 4000
+2023-09-29T20:42:08.111Z info: Products found:
+2023-09-29T20:43:07.250Z info: Products found:
+2023-09-29T20:43:21.799Z info: Products found:
+2023-09-29T20:43:41.213Z info: Logger instance:
+2023-09-29T20:43:41.399Z info: Server on port 4000
+2023-09-29T20:43:43.705Z info: Products found:
+2023-09-29T20:49:26.673Z info: Logger instance:
+2023-09-29T20:49:26.795Z info: Server on port 4000
+2023-09-29T20:49:31.306Z info: Products found:
+2023-09-29T20:53:30.003Z info: Products found:
+2023-09-29T22:19:21.072Z info: Logger instance:
+2023-09-29T22:19:21.214Z info: Server on port 4000
+2023-09-29T22:19:35.871Z info: Logger instance:
+2023-09-29T22:19:35.999Z info: Server on port 4000
+2023-09-29T22:19:42.585Z info: Products found:
+2023-09-29T22:19:42.592Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:27:54.784Z info: Logger instance:
+2023-09-29T22:27:54.969Z info: Server on port 4000
+2023-09-29T22:29:58.048Z info: Logger instance:
+2023-09-29T22:29:58.173Z info: Server on port 4000
+2023-09-29T22:30:13.351Z info: Products found:
+2023-09-29T22:30:13.356Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:15.362Z info: Products found:
+2023-09-29T22:30:15.364Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:17.781Z info: Products found:
+2023-09-29T22:30:17.783Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:18.475Z info: Products found:
+2023-09-29T22:30:18.478Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:31:20.849Z info: Logger instance:
+2023-09-29T22:31:21.012Z info: Server on port 4000
+2023-09-29T22:31:23.168Z info: Products found:
+2023-09-29T22:31:23.174Z error: Error finding products: Cannot read properties of undefined (reading 'cartId')
+2023-09-29T22:31:47.582Z info: Logger instance:
+2023-09-29T22:31:47.689Z info: Server on port 4000
+2023-09-29T22:31:49.404Z info: Products found:
+2023-09-29T22:32:10.892Z info: Logger instance:
+2023-09-29T22:32:10.998Z info: Server on port 4000
+2023-09-29T22:32:11.941Z info: Products found:
+2023-09-29T22:43:10.674Z info: Logger instance:
+2023-09-29T22:43:10.825Z info: Server on port 4000
+2023-09-29T22:49:24.343Z info: Logger instance:
+2023-09-29T22:49:24.477Z info: Server on port 4000
+2023-09-29T22:49:41.547Z info: Logger instance:
+2023-09-29T22:49:41.688Z info: Server on port 4000
+2023-09-29T22:49:50.050Z info: Products found:
+2023-09-29T22:49:57.554Z info: Products found:
+2023-09-29T22:50:44.711Z info: Logger instance:
+2023-09-29T22:50:44.866Z info: Server on port 4000
+2023-09-29T22:52:22.728Z info: Products found:
+2023-09-29T22:53:37.879Z info: Products found:
+2023-09-29T22:55:05.901Z info: Logger instance:
+2023-09-29T22:55:06.016Z info: Server on port 4000
+2023-09-29T22:55:08.918Z info: Products found:
+2023-09-29T22:55:17.898Z info: Products found:
+2023-09-29T22:57:19.608Z info: Logger instance:
+2023-09-29T22:57:19.717Z info: Server on port 4000
+2023-09-29T22:57:33.021Z info: Products found:
+2023-09-29T22:57:46.328Z info: Products found:
+2023-09-29T23:11:16.264Z info: Logger instance:
+2023-09-29T23:11:16.431Z info: Server on port 4000
+2023-09-29T23:11:47.620Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-09-29T23:11:48.011Z info: Products found:
+2023-09-29T23:12:01.030Z info: Products found:
+2023-09-29T23:14:14.236Z info: Logger instance:
+2023-09-29T23:14:14.342Z info: Server on port 4000
+2023-09-29T23:17:55.070Z info: Logger instance:
+2023-09-29T23:17:55.179Z info: Server on port 4000
+2023-09-29T23:30:57.812Z info: Logger instance:
+2023-09-29T23:30:57.926Z info: Server on port 4000
+2023-09-29T23:37:34.652Z info: Logger instance:
+2023-09-29T23:37:34.771Z info: Server on port 4000
+2023-09-29T23:37:39.646Z info: Logger instance:
+2023-09-29T23:37:39.753Z info: Server on port 4000
+2023-09-29T23:38:54.239Z info: Logger instance:
+2023-09-29T23:38:54.343Z info: Server on port 4000
+2023-09-29T23:42:56.552Z info: Logger instance:
+2023-09-29T23:42:56.640Z info: Server on port 4000
+2023-09-29T23:58:35.032Z info: Logger instance:
+2023-09-29T23:58:35.163Z info: Server on port 4000
+2023-09-30T00:01:11.209Z info: Logger instance:
+2023-09-30T00:01:11.378Z info: Server on port 4000
+2023-09-30T00:05:36.772Z info: Logger instance:
+2023-09-30T00:05:36.900Z info: Server on port 4000
+2023-09-30T00:08:36.152Z info: Products found:
+2023-09-30T00:08:46.090Z info: Products found:
+2023-09-30T00:08:54.681Z info: Products found:
+2023-09-30T00:11:40.491Z error: Failed to create ticket: ticketMongo is not a constructor
+2023-09-30T00:13:17.458Z info: Logger instance:
+2023-09-30T00:13:17.567Z info: Server on port 4000
+2023-09-30T00:13:24.855Z error: Failed to create ticket: ticketMongo.createOne is not a constructor
+2023-09-30T00:16:21.558Z info: Logger instance:
+2023-09-30T00:16:21.782Z info: Server on port 4000
+2023-09-30T00:17:47.701Z error: Failed to create ticket: ticketModel is not defined
+2023-09-30T00:27:40.183Z info: Logger instance:
+2023-09-30T00:27:40.302Z info: Server on port 4000
+2023-09-30T00:27:46.888Z info: Ticket created: Ticket validation failed: code: Path `code` is required., amount: Path `amount` is required., purchaser: Path `purchaser` is required.
+2023-09-30T00:32:46.398Z info: Ticket created:
+2023-09-30T00:36:42.446Z info: Products found:
+2023-09-30T00:41:52.975Z error: Error fetching ticket: ticketMongo.findById is not a function
+2023-09-30T00:42:44.710Z info: Logger instance:
+2023-09-30T00:42:44.866Z info: Server on port 4000
+2023-09-30T00:44:20.932Z info: Ticket found:
+2023-09-30T00:45:30.334Z info: Ticket updated successfully:
+2023-09-30T00:46:05.614Z info: Ticket deleted successfully:

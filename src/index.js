@@ -15,8 +15,6 @@ import viewsRouter from "./routes/views.routes.js";
 import usersRouter from "./routes/users.routes.js";
 import cartRouter from "./routes/cart.routes.js";
 import productsRouter from "./routes/products.routes.js";
-import messagesRouter from "./routes/messages.routes.js";
-import chatRouter from "./routes/chat.routes.js";
 import ticketRouter from "./routes/ticket.routes.js";
 import jwtRouter from "./routes/jwt.routes.js"
 import mockingRouter from "./routes/mocking.routes.js"
@@ -174,8 +172,6 @@ app.use("/api/cart", cartRouter);
 app.use("/api/views", viewsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/jwt", jwtRouter);
-app.use("/api/message", messagesRouter);
-app.use("/api/chat", chatRouter);
 app.use("/api/ticket", ticketRouter);
 app.use("/api/mockingproducts", mockingRouter);
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(spec));

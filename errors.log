@@ -129,3 +129,13 @@
 2023-09-29T19:48:31.313Z error: Error adding product to cart:
 2023-09-29T19:56:38.664Z error: Error adding product to cart:
 2023-09-29T20:04:01.876Z error: Error adding product to cart:
+2023-09-29T22:19:42.592Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:13.356Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:15.364Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:17.783Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:30:18.478Z error: Error finding products: Cannot read properties of undefined (reading 'cart')
+2023-09-29T22:31:23.174Z error: Error finding products: Cannot read properties of undefined (reading 'cartId')
+2023-09-30T00:11:40.491Z error: Failed to create ticket: ticketMongo is not a constructor
+2023-09-30T00:13:24.855Z error: Failed to create ticket: ticketMongo.createOne is not a constructor
+2023-09-30T00:17:47.701Z error: Failed to create ticket: ticketModel is not defined
+2023-09-30T00:41:52.975Z error: Error fetching ticket: ticketMongo.findById is not a function

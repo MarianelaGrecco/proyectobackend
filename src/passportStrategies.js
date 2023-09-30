@@ -42,6 +42,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await usersModel.findById(id);
+    user.cart = loadUserCart(user.id);
     done(null, user);
   } catch (error) {
     done(error, null);

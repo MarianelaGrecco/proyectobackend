@@ -65,23 +65,44 @@ export const userProfile = async (req, res) => {
   }
 };
 
-//actualizar usuario premium
-export const updatePremiumStatus = async (req, res) => {
+export const uploadDocuments = async (req, res) => {
   const { uid } = req.params;
-  
+
   try {
-    // Busca al usuario por su UID
-    const user = await usersModel.findOne({ uid });
+    const user = await usersService.findOneById({ uid });
 
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    // Verifica si el usuario ha cargado los documentos requeridos
+    user.documents.push(...req.files.map((file) => ({
+      name: file.originalname,
+      reference: file.path,
+    })));
+
+    await user.save();
+
+    logger.info('Document uploaded successfully');
+    res.status(200).json({ message: 'Document uploaded successfully' });
+  } catch (error) {
+    logger.error('Error uploading document:', error);
+    res.status(500).json({ error });
+  }
+};
+
+
+//actualizar usuario premium
+export const updatePremiumStatus = async (req, res) => {
+  const { uid } = req.params;
+  try {
+    const user = await usersService.finOneUser({ uid });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    
     if (!user.hasUploadedDocuments) {
       return res.status(400).json({ message: 'User has not uploaded required documents' });
     }
-
     // Actualiza el estado del usuario a premium
     user.role = 'premium';
     await user.save();

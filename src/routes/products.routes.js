@@ -3,8 +3,14 @@ import { createOneProduct, findAllProducts, findOneProduct, updateOneProduct, de
 
 const productsRouter = Router();
 
+// Añadir al comienzo de tu archivo products.routes.js
+productsRouter.get("/:pid/detalle", (req, res) => {
+    const { pid } = req.params;
+    res.render("product-details", { pid });
+  });
+  
 productsRouter.get("/", findAllProducts);
-
+  
 productsRouter.get("/:pid", findOneProduct);
 
 productsRouter.post("/nuevoProducto", createOneProduct);

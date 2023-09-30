@@ -13,10 +13,10 @@ export const findAllProducts = async (req, res) => {
     const cid = req.params.cid || null;
     const pid = req.params.pid || null;
     
-    console.log("CID:", cid);
-    console.log("PID:", pid);
+    console.log("Contexto de la plantilla:", { products, cid, pid });
 
-    res.render("products", { products });
+  
+    res.render("products", { products, cid, pid });
   } catch (error) {
     logger.error("Error finding products:", error);
     res.status(500).json({ error });
@@ -26,12 +26,11 @@ export const findAllProducts = async (req, res) => {
 
 export const findOneProduct = async (req, res) => {
   const { pid } = req.params;
-  console.log("Product ID:", pid);
   try {
-    const products = await productsService.findOneProduct(pid);
-    if (products) {
-      logger.info("Product found:", products);
-      res.render("product-detail", { products, pid });
+    const product = await productsService.findOneProduct(pid);
+    if (product) {
+      logger.info("Product found:", product);
+      res.render("product-detail", { product });
     } else {
       logger.warn("Product not found");
       res.status(404).json({ message: "Product not found" });
