@@ -56,7 +56,7 @@ console.log("Logger instance:", logger)
   res.send("Logs probados");
 });
 
-
+//configuraciones
 const PORT = config.port;
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

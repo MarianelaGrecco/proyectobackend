@@ -17,7 +17,6 @@ describe("Test routes Cart", () => {
   });
 
   it('[POST] /api/cart', async () => {
-    // Realiza una solicitud POST para crear un nuevo carrito
     const response = await requester.post('/api/cart');
     expect(response.statusCode).to.equal(200);
   });

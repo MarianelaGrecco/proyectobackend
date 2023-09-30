@@ -1,6 +1,7 @@
 import { usersService } from "../services/users.service.js";
 import logger from "../utils/logger.js";
 
+//Muestra todo los usuarios enla BD
 export const findAllUsers = async (req, res) => {
   try {
     const users = await usersService.findAllUsers();
@@ -17,6 +18,7 @@ export const findAllUsers = async (req, res) => {
   }
 };
 
+//Busca un usuario por su pid
 export const findOneUser = async (req, res) => {
   const { uid } = req.params;
   try {
@@ -34,6 +36,7 @@ export const findOneUser = async (req, res) => {
   }
 };
 
+//Crea un usuario en la BD
 export const createOneUser = async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
   try {
@@ -55,6 +58,7 @@ export const createOneUser = async (req, res) => {
   }
 };
 
+//Trae el perfil con datos del usuario
 export const userProfile = async (req, res) => {
   try {
     const userData = req.user_id;
@@ -65,6 +69,7 @@ export const userProfile = async (req, res) => {
   }
 };
 
+//Subir documentos
 export const uploadDocuments = async (req, res) => {
   const { uid } = req.params;
 
@@ -116,6 +121,7 @@ export const updatePremiumStatus = async (req, res) => {
 };
 
 
+//Logout del usuario
 export const logoutUser = async (req, res) => {
   try {
     if (!req.isAuthenticated()) {
@@ -143,3 +149,14 @@ export const logoutUser = async (req, res) => {
     res.status(500).send('Error en el servidor');
   }
 };
+
+//Limpiar usuarios inactivos
+export const cleanInactiveUsers = async (req, res) => {
+  try {
+    const result = await usersService.cleanInactiveUsers();
+    res.json({ message: 'Users cleaned successfully', result });
+  } catch (error) {
+    console.error('Error cleaning users:', error);
+    res.status(500).json({ error: 'Failed to clean users' });
+  }
+}

@@ -47,4 +47,13 @@ export default class BasicMongo {
       return error;
     }
   }
+
+  async deleteMany(filter) {
+    try {
+      const result = await this.model.deleteMany(filter);
+      return result;
+    } catch (error) {
+      return error;
+    }
+}
 }

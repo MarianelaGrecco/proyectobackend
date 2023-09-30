@@ -18,28 +18,27 @@ class CartService {
       throw error;
     }
   }
-  
+
   async addProductToCart(cid, pid, quantity) {
     try {
-      // Obtén el carrito por su ID
       const cart = await cartMongo.findOneById(cid);
       console.log("Cart before adding product:", cart);
       if (!cart) {
-        // Puedes manejar esto de la manera que prefieras, por ejemplo, lanzando un error o creando un nuevo carrito.
         console.log("Cart not found");
-        // Lanza un error, por ejemplo
         throw new Error("Cart not found");
       }
 
       // Verificar e inicializar cart.products si es necesario
-    if (!cart.products) {
-      cart.products = [];
-    }
-  
+      if (!cart.products) {
+        cart.products = [];
+      }
+
       // Verifica si el producto ya existe en el carrito
-      const existingProduct = cart.products.find((products) => products.pid === pid);
+      const existingProduct = cart.products.find(
+        (products) => products.pid === pid
+      );
       console.log("Existing product:", existingProduct);
-  
+
       if (existingProduct) {
         // Si el producto ya existe, simplemente actualiza la cantidad
         existingProduct.quantity = quantity;
@@ -47,11 +46,11 @@ class CartService {
         // Si el producto no existe, agrégalo al carrito
         cart.products.push({ pid, quantity });
       }
-  
+
       // Guarda el carrito actualizado en la base de datos
       const updatedCart = await cart.save();
       console.log("Cart after adding product:", updatedCart);
-  
+
       return updatedCart;
     } catch (error) {
       console.error("Error in addProductToCart:", error);
@@ -61,9 +60,18 @@ class CartService {
 
   async removeProductFromCart(cid, pid) {
     try {
-      const cart = await cartMongo.findOneById(cid)
-      // Agregar lógica para eliminar el producto del carrito aquí
-      return cart;
+      const cart = await cartMongo.findOneById(cid);
+
+      if (!cart) {
+        throw new Error("Cart not found");
+      }
+      const updatedProducts = cart.products.filter(
+        (product) => product._id.toString() !== pid
+      );
+      const updatedCart = await cartMongo.updateOne(cid, {
+        products: updatedProducts,
+      });
+      return updatedCart;
     } catch (error) {
       throw error;
     }
@@ -71,9 +79,21 @@ class CartService {
 
   async updateProductQuantityInCart(cid, pid, quantity) {
     try {
-      const cart = await cartMongo.findOneById (cid);
-      // Agregar lógica para actualizar la cantidad del producto en el carrito aquí
-      return cart;
+      const cart = await cartMongo.findOneById(cid);
+      if (!cart) {
+        throw new Error("Cart not found");
+      }
+      const productIndex = cart.products.findIndex(
+        (product) => product._id.toString() === pid
+      );
+      if (productIndex === -1) {
+        throw new Error("Product not found in cart");
+      }
+      cart.products[productIndex].quantity = quantity;
+      const updatedCart = await cartMongo.updateOne(cid, {
+        products: cart.products,
+      });
+      return updatedCart;
     } catch (error) {
       throw error;
     }
@@ -81,7 +101,7 @@ class CartService {
 
   async updateOneCart(cid, products) {
     try {
-      const cart = await cartMongo.updateOne( cid, products, { new: true });
+      const cart = await cartMongo.updateOne(cid, products, { new: true });
       return cart;
     } catch (error) {
       throw error;
@@ -99,8 +119,20 @@ class CartService {
 
   async processPurchase(cid, user) {
     try {
-      const cart = await cartMongo.findOne({ _id: cid }).populate("products.id_prod");
-      // Agregar lógica para procesar la compra aquí
+      const cart = await cartMongo
+        .findOne({ _id: cid })
+        .populate("products.id_prod");
+        
+        if (!cart) {
+          throw new Error("Cart not found");
+        }
+        if (!cart.products || cart.products.length === 0) {
+          throw new Error("Cart is empty");
+        }
+        await cartMongo.deleteOne({ _id: cid });
+        const resultadoCompra = {
+          message: "Purchase processed successfully",
+        };
       return resultadoCompra;
     } catch (error) {
       throw error;
@@ -109,5 +141,3 @@ class CartService {
 }
 
 export const cartService = new CartService();
-
-

@@ -34,7 +34,6 @@ passport.use(
   )
 );
 
-
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
@@ -48,8 +47,6 @@ passport.deserializeUser(async (id, done) => {
     done(error, null);
   }
 });
-
-
 
 
 // GITHUB - PASSPORT

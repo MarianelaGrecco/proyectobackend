@@ -1,7 +1,7 @@
 import { ticketService } from "../services/ticket.service.js";
 import logger from "../utils/logger.js";
 
-
+//Muestra los tickets
 export const getTicket = async (req, res) => {
   try{
     const ticket = await ticketService.getTicket(req.params.tid);
@@ -18,7 +18,7 @@ export const getTicket = async (req, res) => {
   }
 }
 
-
+//Crea un nuevo ticket
 export const createTicket= async (req, res) => {
   const { code, amount, purchaser } = req.body;
 
@@ -32,6 +32,7 @@ export const createTicket= async (req, res) => {
   }
 }
 
+//Modifica el ticket
 export const updateTicket = async (req, res) =>{
   try {
     const updatedTicket = await ticketService.updateTicket(req.params.tid, req.body);
@@ -48,6 +49,7 @@ export const updateTicket = async (req, res) =>{
   }
 }
 
+//Borra el ticket por su tid
 export const deleteTicket = async (req, res) => {
   try {
     const removedTicket = await ticketService.deleteTicket(req.params.tid);

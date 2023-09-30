@@ -1,13 +1,14 @@
 import { productsService } from "../services/products.service.js";
 import logger from "../utils/logger.js";
 
+//Muestra todos los productos
 export const findAllProducts = async (req, res) => {
   try {
     const products = await productsService.findAllProducts();
     logger.info("Products found:", products); 
    
     products.forEach(product => {
-      product._id = product._id.toString(); // Convierte _id a string
+      product._id = product._id.toString(); 
     });
    
     const cid = req.params.cid || null;
@@ -23,16 +24,16 @@ export const findAllProducts = async (req, res) => {
   }
 };
 
-
+//Busca un producto por su id
 export const findOneProduct = async (req, res) => {
   const { pid } = req.params;
   try {
     const product = await productsService.findOneProduct(pid);
     if (product) {
       logger.info("Product found:", product);
-      res.render("product-detail", { product });
+      res.render("product-details", { product });
     } else {
-      logger.warn("Product not found");
+      // logger.warn("Product not found");
       res.status(404).json({ message: "Product not found" });
     }
   } catch (error) {
@@ -41,6 +42,7 @@ export const findOneProduct = async (req, res) => {
   }
 };
 
+//Crea un nuevo producto
 export const createOneProduct = async (req, res) => {
   const {
     title,
@@ -66,7 +68,7 @@ export const createOneProduct = async (req, res) => {
   }
 }
 
-
+//Modificar un producto
 export const updateOneProduct = async (req, res) => {
   const { pid } = req.params;
   const { name, price } = req.body;
@@ -83,6 +85,7 @@ export const updateOneProduct = async (req, res) => {
   }
 };
 
+//Borrar un producto por su id
 export const deleteOneProduct = async (req, res) => {
   const { pid } = req.params;
   try {

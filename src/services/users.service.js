@@ -58,6 +58,20 @@ class UsersService {
       return error;
     }
   }
+
+  async cleanInactiveUsers() {
+    try {
+      const twoDaysAgo = new Date();
+      twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+
+      const result = await usersMongo.deleteMany({ lastConnection: { $lt: twoDaysAgo } });
+
+  return result;
+    } catch (error) {
+      return error;
+    }
+  }
 }
+
 
 export const usersService = new UsersService ()

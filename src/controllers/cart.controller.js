@@ -44,7 +44,10 @@ export const addProductToCart = async (req, res) => {
 
   console.log("Adding product to cart:", cid, pid, quantity);
   if (!quantity) {
-    logger.warning("Missing information to add the product to the cart:", req.body);
+    logger.warning(
+      "Missing information to add the product to the cart:",
+      req.body
+    );
     return res.status(400).json({ message: "Missing information" });
   }
   try {
@@ -58,16 +61,23 @@ export const addProductToCart = async (req, res) => {
   }
 };
 
-
 // Eliminar un producto del carrito
 export const removeProductFromCart = async (req, res) => {
   const { cid, pid } = req.params;
   try {
     const updatedCart = await cartService.removeProductFromCart(cid, pid);
     logger.info("Product removed from cart:", pid, "in cart:", cid);
-    res.status(200).json({ message: "Product removed from cart", cart: updatedCart });
+    res
+      .status(200)
+      .json({ message: "Product removed from cart", cart: updatedCart });
   } catch (error) {
-    logger.error("Error removing product from cart:", pid, "in cart:", cid, error);
+    logger.error(
+      "Error removing product from cart:",
+      pid,
+      "in cart:",
+      cid,
+      error
+    );
     res.status(500).json({ error });
   }
 };
@@ -77,15 +87,30 @@ export const updateProductQuantityInCart = async (req, res) => {
   const { cid, pid } = req.params;
   const { quantity } = req.body;
   if (!quantity) {
-    logger.warning("Missing information to update product quantity in the cart:", req.body);
+    logger.warning(
+      "Missing information to update product quantity in the cart:",
+      req.body
+    );
     return res.status(400).json({ message: "Missing information" });
   }
   try {
-    const updatedCart = await cartService.updateProductQuantityInCart(cid, pid, quantity);
+    const updatedCart = await cartService.updateProductQuantityInCart(
+      cid,
+      pid,
+      quantity
+    );
     logger.info("Product quantity updated in cart:", pid, "in cart:", cid);
-    res.status(200).json({ message: "Product quantity updated in cart", cart: updatedCart });
+    res
+      .status(200)
+      .json({ message: "Product quantity updated in cart", cart: updatedCart });
   } catch (error) {
-    logger.error("Error updating product quantity in cart:", pid, "in cart:", cid, error);
+    logger.error(
+      "Error updating product quantity in cart:",
+      pid,
+      "in cart:",
+      cid,
+      error
+    );
     res.status(500).json({ error });
   }
 };
@@ -129,6 +154,3 @@ export const processPurchase = async (req, res) => {
     res.status(500).json({ error });
   }
 };
-
-
-

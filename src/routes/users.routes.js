@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  cleanInactiveUsers,
   createOneUser,
   findAllUsers,
   findOneUser,
@@ -31,12 +32,14 @@ userRouter.post(
   })
 );
 
-// Ruta para subir documentos
 userRouter.post('/:uid/documents', uploadDocuments);
-// Ruta para actualizar al usuario a premium si ha cargado los documentos requeridos
+
 userRouter.put("/:uid/premium", updatePremiumStatus);
 
+
 userRouter.get('/logout', logoutUser);
+
+userRouter.delete('/cleanInactiveUsers', cleanInactiveUsers);
 
 
 //GitHub

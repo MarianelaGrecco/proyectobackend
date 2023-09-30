@@ -3,12 +3,12 @@
 
 {{#if products}}
   <div>
-    <h2>{{products.title}}</h2>
-    <p>{{products.description}}</p>
-    <p>Precio: {{products.price}}</p>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <p>Precio: {{price}}</p>
 
     <!-- Formulario para agregar al carrito -->
-    <form action="/cart/{{cid}}/products/{{product.pid}}" method="post">
+    <form action="/cart/{{cid}}/products/{{pid}}" method="post">
       <input type="hidden" name="quantity" value="1">
       <button type="submit">Agregar al Carrito</button>
     </form>
