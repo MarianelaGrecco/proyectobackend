@@ -152,7 +152,7 @@ io.on("connection", (socket) => {
 //sessions
 app.use(session({
     store: new mongoStore({
-      url: config. mongo_uri,
+      mongoUrl: config. mongo_uri,
       ttl: 60
     }),
   secret: config.sessionSecret,
