@@ -4,3 +4,15 @@
 2023-09-30T20:39:42.275Z info: Products found:
 2023-10-02T15:10:33.105Z info: Logger instance:
 2023-10-02T15:10:33.247Z info: Server on port 4000
+2023-10-02T15:25:30.281Z info: Logger instance:
+2023-10-02T15:25:30.433Z info: Server on port 4000
+2023-10-02T15:28:53.109Z info: Products found:
+2023-10-02T15:28:57.283Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-02T15:30:08.672Z info: Users found:
+2023-10-02T15:30:39.859Z info: Users found:
+2023-10-02T15:30:43.177Z info: Users found:
+2023-10-02T15:30:58.900Z info: Users found:
+2023-10-02T15:31:11.789Z info: Products found:
+2023-10-02T15:31:14.227Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-02T15:31:15.514Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-02T15:31:58.975Z info: Products found:
