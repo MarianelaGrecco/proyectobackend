@@ -16,3 +16,37 @@
 2023-10-02T15:31:14.227Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
 2023-10-02T15:31:15.514Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
 2023-10-02T15:31:58.975Z info: Products found:
+2023-10-02T15:34:43.851Z info: Logger instance:
+2023-10-02T15:34:43.956Z info: Server on port 4000
+2023-10-02T15:34:53.516Z info: Products found:
+2023-10-03T13:43:58.103Z info: Products found:
+2023-10-03T13:46:12.465Z info: Products found:
+2023-10-03T13:46:29.404Z info: Products found:
+2023-10-03T13:49:53.702Z info: Products found:
+2023-10-03T13:52:03.510Z info: Products found:
+2023-10-03T13:54:11.225Z info: Products found:
+2023-10-03T13:54:26.502Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-03T14:03:41.075Z info: User created:
+2023-10-03T14:03:55.226Z info: Products found:
+2023-10-03T14:04:10.477Z info: User found: Cast to ObjectId failed for value "logout" (type string) at path "_id" for model "Users"
+2023-10-03T16:06:27.038Z info: Products found:
+2023-10-03T16:07:10.723Z info: User created:
+2023-10-03T16:07:13.399Z info: Products found:
+2023-10-03T16:11:57.737Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-03T16:25:59.061Z info: Logger instance:
+2023-10-03T16:25:59.210Z info: Server on port 4000
+2023-10-03T16:26:50.269Z info: Products found:
+2023-10-03T16:28:40.701Z info: Logger instance:
+2023-10-03T16:28:40.830Z info: Server on port 4000
+2023-10-03T16:29:13.618Z info: Products found:
+2023-10-03T18:51:39.443Z info: Products found:
+2023-10-03T18:57:44.671Z info: Products found:
+2023-10-03T19:06:50.461Z info: Logger instance:
+2023-10-03T19:06:50.790Z info: Server on port 4000
+2023-10-03T19:12:16.941Z info: Products found:
+2023-10-03T19:23:04.489Z info: User created:
+2023-10-03T19:23:05.647Z info: Products found:
+2023-10-03T19:24:32.332Z info: Products found:
+2023-10-03T19:24:39.284Z info: Products found:
+2023-10-03T19:25:07.543Z info: User created:
+2023-10-03T19:25:21.722Z info: Products found:

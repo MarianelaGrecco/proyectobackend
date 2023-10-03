@@ -54,7 +54,7 @@ export const addProductToCart = async (req, res) => {
     console.log("Inside try block");
     const updatedCart = await cartService.addProductToCart(cid, pid, quantity);
     logger.info("Product added to cart:", pid, "in cart:", cid);
-    res.redirect(`/cart/${cid}`);
+    res.status(200).json({ message: "Product added to cart", cart: updatedCart });
   } catch (error) {
     logger.error("Error adding product to cart:", pid, "in cart:", cid, error);
     res.status(500).json({ error });

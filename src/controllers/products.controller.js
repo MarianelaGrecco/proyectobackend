@@ -13,10 +13,7 @@ export const findAllProducts = async (req, res) => {
    
     const cid = req.params.cid || null;
     const pid = req.params.pid || null;
-    
-    console.log("Contexto de la plantilla:", { products, cid, pid });
-
-  
+      
     res.render("products", { products, cid, pid });
   } catch (error) {
     logger.error("Error finding products:", error);

@@ -10,12 +10,12 @@
           <p><strong>Categoría:</strong> {{category}}</p>
           <p><strong>Stock:</strong> {{stock}}</p>
 
-          <a href="/products/{{pid}}" class="btn btn-primary">Ver detalles</a>
+          <a href="/products/{{_id}}/product-details" class="btn btn-primary">Ver detalles</a>
           
           <!-- Formulario para agregar al carrito -->
-          <form method="POST" action="/cart/{{cid}}/products/{{pid}}">
+          <form method="POST" action="/cart/{{cid}}/products/{{_id}}">
             <input type="hidden" name="cid" value="{{cid}}" />
-            <input type="hidden" name="pid" value="{{pid}}" />
+            <input type="hidden" name="pid" value="{{_id}}" />
             <label for="quantity">Cantidad:</label>
             <input type="number" name="quantity" value="1" min="1" />
             <button type="submit" class="btn btn-success">Agregar al carrito</button>
