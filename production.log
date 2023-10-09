@@ -50,3 +50,546 @@
 2023-10-03T19:24:39.284Z info: Products found:
 2023-10-03T19:25:07.543Z info: User created:
 2023-10-03T19:25:21.722Z info: Products found:
+2023-10-03T19:36:17.451Z info: Logger instance:
+2023-10-03T19:36:17.568Z info: Server on port 4000
+2023-10-03T19:36:24.236Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-03T19:36:36.718Z info: Products found:
+2023-10-04T13:42:53.194Z info: Logger instance:
+2023-10-04T13:42:53.407Z info: Server on port 4000
+2023-10-04T13:46:38.007Z info: Products found:
+2023-10-04T13:46:43.750Z info: Products found:
+2023-10-04T14:01:22.314Z info: Logger instance:
+2023-10-04T14:01:22.519Z info: Server on port 4000
+2023-10-04T14:01:25.510Z info: Products found:
+2023-10-04T14:03:54.201Z info: Products found:
+2023-10-04T14:06:31.864Z info: Users found:
+2023-10-04T14:07:51.471Z info: Cart created for user:
+2023-10-04T14:49:45.642Z info: Products found:
+2023-10-04T14:50:28.106Z info: Products found:
+2023-10-04T15:03:19.226Z info: Products found:
+2023-10-04T15:11:00.844Z info: Logger instance:
+2023-10-04T15:11:01.031Z info: Server on port 4000
+2023-10-04T15:11:06.308Z info: Products found:
+2023-10-04T16:03:54.131Z info: Products found:
+2023-10-04T16:04:15.412Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-04T16:05:39.400Z info: User created:
+2023-10-04T16:05:42.475Z info: Products found:
+2023-10-04T16:12:56.539Z info: Products found:
+2023-10-04T16:20:28.632Z info: Logger instance:
+2023-10-04T16:20:28.738Z info: Server on port 4000
+2023-10-04T16:21:00.831Z info: Products found:
+2023-10-04T16:21:25.956Z info: Products found:
+2023-10-04T16:21:57.560Z error: Error creating user: cartService is not defined
+2023-10-04T16:23:33.035Z info: Products found:
+2023-10-04T16:23:46.593Z error: Error creating user: cartService is not defined
+2023-10-04T16:30:07.896Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-04T16:30:34.965Z error: Error creating user: cartService is not defined
+2023-10-04T16:31:19.758Z error: Error creating user: cartService is not defined
+2023-10-04T16:37:38.898Z info: Logger instance:
+2023-10-04T16:37:39.033Z info: Server on port 4000
+2023-10-04T16:38:25.630Z info: User created:
+2023-10-04T16:38:25.631Z error: Error creating user: usersModel is not defined
+2023-10-04T16:39:33.832Z info: Logger instance:
+2023-10-04T16:39:33.976Z info: Server on port 4000
+2023-10-04T16:39:45.727Z error: Error creating user: createdUser.save is not a function
+2023-10-04T16:47:43.789Z info: User created:
+2023-10-04T16:50:51.644Z info: Logger instance:
+2023-10-04T16:50:51.793Z info: Server on port 4000
+2023-10-04T16:52:40.036Z error: Error creating user: usersService is not a constructor
+2023-10-04T16:55:43.479Z info: Logger instance:
+2023-10-04T16:55:43.664Z info: Server on port 4000
+2023-10-04T16:56:07.827Z error: Error creating user: createdUser.save is not a function
+2023-10-04T17:04:53.269Z info: Logger instance:
+2023-10-04T17:04:53.370Z info: Server on port 4000
+2023-10-04T17:05:17.430Z info: User created:
+2023-10-04T17:06:33.748Z info: Products found:
+2023-10-04T17:07:58.750Z info: Products found:
+2023-10-04T17:31:15.894Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-04T17:31:18.240Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-04T17:31:33.489Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-04T17:31:34.656Z info: User found: Cast to ObjectId failed for value "login" (type string) at path "_id" for model "Users"
+2023-10-04T17:33:02.514Z info: Products found:
+2023-10-04T17:35:35.305Z info: Products found:
+2023-10-04T17:36:32.988Z info: Products found:
+2023-10-04T17:39:24.148Z info: Products found:
+2023-10-04T17:56:39.386Z info: Logger instance:
+2023-10-04T17:56:39.469Z info: Server on port 4000
+2023-10-04T17:56:42.583Z info: Products found:
+2023-10-04T18:00:02.294Z info: Products found:
+2023-10-04T18:05:08.037Z info: Products found:
+2023-10-04T18:06:05.363Z info: Products found:
+2023-10-04T18:07:26.334Z info: Products found:
+2023-10-04T18:20:41.415Z info: Products found:
+2023-10-04T18:25:07.445Z info: Products found:
+2023-10-04T18:27:01.861Z info: Products found:
+2023-10-04T18:33:52.266Z info: Products found:
+2023-10-04T18:35:06.764Z info: Products found:
+2023-10-04T23:35:01.843Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-04T23:35:09.200Z info: Product found: Cast to ObjectId failed for value "home" (type string) at path "_id" for model "products"
+2023-10-04T23:35:10.317Z info: Products found:
+2023-10-04T23:35:12.766Z info: Products found:
+2023-10-04T23:44:33.256Z info: Products found:
+2023-10-04T23:44:40.329Z info: Products found:
+2023-10-04T23:44:48.508Z info: Products found:
+2023-10-04T23:46:29.636Z info: Logger instance:
+2023-10-04T23:46:29.731Z info: Server on port 4000
+2023-10-04T23:46:37.771Z info: Products found:
+2023-10-04T23:47:02.793Z info: User created:
+2023-10-04T23:47:05.497Z info: Products found:
+2023-10-04T23:49:33.407Z info: Products found:
+2023-10-04T23:49:35.501Z info: Cart created for user:
+2023-10-04T23:59:00.433Z info: Products found:
+2023-10-04T23:59:29.211Z info: Products found:
+2023-10-04T23:59:35.415Z info: Cart created for user:
+2023-10-05T00:03:30.880Z info: Products found:
+2023-10-05T00:03:36.436Z info: Cart created for user:
+2023-10-05T00:09:41.154Z info: Logger instance:
+2023-10-05T00:09:41.244Z info: Server on port 4000
+2023-10-05T00:09:55.498Z info: Products found:
+2023-10-05T00:10:01.353Z info: Cart created for user:
+2023-10-05T00:17:19.942Z info: Products found:
+2023-10-05T00:17:32.976Z info: Cart created for user:
+2023-10-05T00:30:59.088Z error: Error creating user: createdUser.save is not a function
+2023-10-05T00:34:08.298Z info: Products found:
+2023-10-05T00:34:24.025Z info: Cart created for user:
+2023-10-05T00:37:10.502Z info: Products found:
+2023-10-05T00:37:14.724Z info: Cart created for user:
+2023-10-05T00:37:23.321Z info: Cart created for user:
+2023-10-05T00:39:58.654Z error: Error creating user: createdUser.save is not a function
+2023-10-05T00:41:20.256Z info: Products found:
+2023-10-05T00:41:38.637Z info: Cart created for user:
+2023-10-05T00:42:59.718Z info: Products found:
+2023-10-05T00:43:02.714Z info: Cart created for user:
+2023-10-05T00:51:12.174Z info: Products found:
+2023-10-05T00:51:17.497Z info: Cart created for user:
+2023-10-05T15:08:44.017Z info: Logger instance:
+2023-10-05T15:08:44.108Z info: Server on port 4000
+2023-10-05T15:13:01.494Z error: Error creating user: cartMongo.findOne is not a function
+2023-10-05T15:14:44.151Z info: Logger instance:
+2023-10-05T15:14:44.314Z info: Server on port 4000
+2023-10-05T15:15:23.672Z info: User created:
+2023-10-05T15:16:03.642Z info: Products found:
+2023-10-05T15:16:12.399Z info: Cart created for user:
+2023-10-05T15:18:30.990Z info: Products found:
+2023-10-05T15:18:34.551Z info: Cart created for user:
+2023-10-05T15:22:33.950Z info: Products found:
+2023-10-05T15:22:36.463Z info: Cart created for user:
+2023-10-05T15:29:57.601Z info: Products found:
+2023-10-05T15:30:00.494Z info: Cart created for user:
+2023-10-05T15:45:46.925Z info: User created:
+2023-10-05T15:45:48.811Z info: Products found:
+2023-10-05T15:45:50.735Z info: Cart created for user:
+2023-10-05T15:52:44.931Z info: Products found:
+2023-10-05T15:52:47.935Z info: Cart created for user:
+2023-10-05T16:00:07.111Z info: Products found:
+2023-10-05T16:00:08.977Z info: Cart created for user:
+2023-10-05T16:59:31.089Z info: Logger instance:
+2023-10-05T16:59:31.182Z info: Server on port 4000
+2023-10-05T16:59:43.467Z info: Products found:
+2023-10-05T17:00:35.815Z error: Error creating user: cartMongo.findOne is not a function
+2023-10-05T17:05:35.899Z info: Logger instance:
+2023-10-05T17:05:36.011Z info: Server on port 4000
+2023-10-05T17:06:18.902Z info: User created:
+2023-10-05T17:06:27.295Z info: Products found:
+2023-10-05T17:27:25.914Z info: Logger instance:
+2023-10-05T17:27:26.035Z info: Server on port 4000
+2023-10-05T17:27:41.885Z info: Products found:
+2023-10-05T18:56:39.590Z info: Products found:
+2023-10-05T19:09:40.124Z error: Error creating user: createdUser.save is not a function
+2023-10-05T19:10:39.221Z info: User created:
+2023-10-05T19:11:24.675Z info: Products found:
+2023-10-05T19:28:13.595Z info: User created:
+2023-10-05T19:29:05.023Z info: Products found:
+2023-10-05T19:51:52.120Z info: User created:
+2023-10-05T19:51:55.561Z info: Products found:
+2023-10-06T15:24:37.507Z info: Products found:
+2023-10-06T15:26:27.659Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:38:38.757Z info: Products found:
+2023-10-06T15:39:19.957Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:43:19.940Z info: Logger instance:
+2023-10-06T15:43:20.046Z info: Server on port 4000
+2023-10-06T15:44:06.805Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:49:47.497Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:51:59.835Z error: Error creating user: createdUser.save is not a function
+2023-10-06T16:01:01.400Z info: Logger instance:
+2023-10-06T16:01:01.536Z info: Server on port 4000
+2023-10-06T16:01:37.906Z info: User created:
+2023-10-06T16:02:40.079Z info: Products found:
+2023-10-06T16:14:38.394Z info: Logger instance:
+2023-10-06T16:14:38.628Z info: Server on port 4000
+2023-10-06T16:15:28.130Z info: User created:
+2023-10-06T16:15:34.501Z info: Products found:
+2023-10-06T19:36:12.526Z info: Logger instance:
+2023-10-06T19:36:12.703Z info: Server on port 4000
+2023-10-06T19:37:24.949Z info: User created:
+2023-10-06T19:37:46.165Z info: Products found:
+2023-10-06T19:44:56.283Z info: Logger instance:
+2023-10-06T19:44:56.406Z info: Server on port 4000
+2023-10-06T19:45:23.724Z info: User created:
+2023-10-06T19:45:23.725Z info: Cart created for user:
+2023-10-06T19:46:42.744Z info: Products found:
+2023-10-06T19:48:45.212Z info: User created:
+2023-10-06T19:48:45.213Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-06T19:50:14.013Z info: Products found:
+2023-10-07T01:10:29.216Z info: Logger instance:
+2023-10-07T01:10:29.345Z info: Server on port 4000
+2023-10-07T01:12:52.263Z info: User created:
+2023-10-07T01:12:52.264Z info: Cart created for user:
+2023-10-07T01:13:10.590Z info: Products found:
+2023-10-07T01:40:22.364Z info: Logger instance:
+2023-10-07T01:40:22.457Z info: Server on port 4000
+2023-10-07T01:42:14.924Z info: User created:
+2023-10-07T01:42:14.925Z info: Cart created for user:
+2023-10-07T01:42:19.616Z info: Products found:
+2023-10-07T01:43:00.605Z info: Products found:
+2023-10-07T01:47:33.097Z info: Logger instance:
+2023-10-07T01:47:33.251Z info: Server on port 4000
+2023-10-07T01:48:48.636Z info: User created:
+2023-10-07T01:48:48.638Z info: Cart created for user:
+2023-10-07T01:48:52.308Z info: Products found:
+2023-10-07T01:50:40.907Z info: Products found:
+2023-10-07T01:51:45.405Z info: Products found:
+2023-10-07T01:53:30.818Z info: Products found:
+2023-10-07T01:58:23.940Z info: Logger instance:
+2023-10-07T01:58:24.054Z info: Server on port 4000
+2023-10-07T01:59:26.532Z info: User created:
+2023-10-07T01:59:26.533Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T01:59:29.876Z info: Products found:
+2023-10-07T02:01:10.653Z info: User created:
+2023-10-07T02:01:10.654Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T02:01:12.356Z info: Products found:
+2023-10-07T02:04:40.605Z info: Logger instance:
+2023-10-07T02:04:40.711Z info: Server on port 4000
+2023-10-07T02:06:07.767Z info: User created:
+2023-10-07T02:06:07.768Z info: Cart created for user:
+2023-10-07T02:06:38.754Z info: Products found:
+2023-10-07T02:11:46.531Z info: Logger instance:
+2023-10-07T02:11:46.644Z info: Server on port 4000
+2023-10-07T02:13:10.088Z info: User created:
+2023-10-07T02:13:10.090Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T02:13:13.463Z info: Products found:
+2023-10-07T12:55:00.017Z info: Logger instance:
+2023-10-07T12:55:00.112Z info: Server on port 4000
+2023-10-07T12:56:45.194Z info: User created:
+2023-10-07T12:56:45.195Z info: Cart created for user:
+2023-10-07T12:56:49.164Z info: Products found:
+2023-10-07T13:06:43.527Z info: User created:
+2023-10-07T13:06:43.528Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T13:07:03.001Z info: Products found:
+2023-10-07T13:10:03.941Z info: User created:
+2023-10-07T13:10:03.942Z info: Cart created for user:
+2023-10-07T13:10:22.846Z info: Products found:
+2023-10-07T15:15:58.933Z info: Logger instance:
+2023-10-07T15:15:59.272Z info: Server on port 4000
+2023-10-07T15:17:05.042Z info: User created:
+2023-10-07T15:17:05.044Z info: Cart created for user:
+2023-10-07T15:17:08.653Z info: Products found:
+2023-10-07T15:25:09.852Z info: Logger instance:
+2023-10-07T15:25:10.004Z info: Server on port 4000
+2023-10-07T15:26:02.978Z info: User created:
+2023-10-07T15:26:02.980Z info: Cart created for user:
+2023-10-07T15:26:09.022Z info: Products found:
+2023-10-07T15:26:09.125Z info: Products found:
+2023-10-07T15:27:28.796Z info: User created:
+2023-10-07T15:27:28.797Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T15:27:32.001Z info: Products found:
+2023-10-07T16:03:15.990Z info: Logger instance:
+2023-10-07T16:03:16.092Z info: Server on port 4000
+2023-10-07T16:04:30.250Z info: User created:
+2023-10-07T16:04:30.251Z info: Cart created for user:
+2023-10-07T16:04:35.033Z info: Products found:
+2023-10-07T16:07:50.630Z info: User created:
+2023-10-07T16:07:50.631Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T16:07:53.730Z info: Products found:
+2023-10-07T16:14:02.410Z info: Logger instance:
+2023-10-07T16:14:02.558Z info: Server on port 4000
+2023-10-07T16:15:07.883Z info: User created:
+2023-10-07T16:15:07.884Z info: Cart created for user:
+2023-10-07T16:15:11.238Z info: Products found:
+2023-10-07T16:34:18.995Z info: Logger instance:
+2023-10-07T16:34:19.115Z info: Server on port 4000
+2023-10-07T16:34:45.252Z info: User created:
+2023-10-07T16:34:45.253Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T16:34:48.561Z info: Products found:
+2023-10-07T16:35:50.905Z info: User created:
+2023-10-07T16:35:50.906Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T16:35:54.491Z info: Products found:
+2023-10-07T16:56:49.543Z info: Logger instance:
+2023-10-07T16:56:49.667Z info: Server on port 4000
+2023-10-07T16:58:27.610Z info: User created:
+2023-10-07T16:58:27.611Z info: Cart created for user:
+2023-10-07T16:58:31.145Z info: Products found:
+2023-10-07T17:03:34.144Z info: Logger instance:
+2023-10-07T17:03:34.345Z info: Server on port 4000
+2023-10-07T17:03:58.061Z info: User created:
+2023-10-07T17:03:58.063Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T17:04:01.534Z info: Products found:
+2023-10-07T17:19:01.650Z info: User created:
+2023-10-07T17:19:01.651Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T17:19:04.608Z info: Products found:
+2023-10-07T17:39:51.625Z info: User created:
+2023-10-07T17:39:51.626Z info: Cart created for user:
+2023-10-07T17:39:56.976Z info: Products found:
+2023-10-07T18:06:25.775Z info: Logger instance:
+2023-10-07T18:06:25.881Z info: Server on port 4000
+2023-10-07T18:06:54.513Z info: User created:
+2023-10-07T18:06:54.514Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T18:07:01.057Z info: Products found:
+2023-10-07T18:14:46.512Z info: User created:
+2023-10-07T18:14:46.513Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T18:15:05.604Z info: Products found:
+2023-10-07T18:38:02.817Z info: User created:
+2023-10-07T18:38:02.818Z info: Cart created for user:
+2023-10-07T18:38:06.654Z info: Products found:
+2023-10-07T18:39:32.257Z info: Products found:
+2023-10-07T18:47:09.791Z info: User created:
+2023-10-07T18:47:09.792Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T18:47:13.008Z info: Products found:
+2023-10-07T18:47:47.457Z info: Products found:
+2023-10-07T18:58:07.027Z info: User created:
+2023-10-07T18:58:07.028Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T18:58:31.446Z info: Products found:
+2023-10-07T19:01:05.753Z info: Products found:
+2023-10-07T19:06:52.113Z info: Logger instance:
+2023-10-07T19:06:52.225Z info: Server on port 4000
+2023-10-07T19:07:55.262Z info: User created:
+2023-10-07T19:07:55.264Z info: Cart created for user:
+2023-10-07T19:07:59.616Z info: Products found:
+2023-10-07T19:21:52.883Z info: User created:
+2023-10-07T19:21:52.885Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T19:22:40.987Z info: Products found:
+2023-10-07T19:27:50.827Z info: User created:
+2023-10-07T19:27:50.828Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T19:28:21.419Z info: Products found:
+2023-10-07T19:28:21.565Z info: Products found:
+2023-10-07T19:30:37.648Z info: User created:
+2023-10-07T19:30:37.649Z info: Cart created for user:
+2023-10-07T19:30:41.897Z info: Products found:
+2023-10-07T19:33:39.973Z info: User created:
+2023-10-07T19:33:39.974Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T19:33:43.948Z info: Products found:
+2023-10-07T19:45:50.878Z info: User created:
+2023-10-07T19:45:50.879Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T19:45:54.685Z info: Products found:
+2023-10-07T19:51:06.262Z info: User created:
+2023-10-07T19:51:06.263Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T19:51:14.593Z info: Products found:
+2023-10-07T20:25:18.160Z info: Logger instance:
+2023-10-07T20:25:18.366Z info: Server on port 4000
+2023-10-07T20:26:36.358Z info: User created:
+2023-10-07T20:26:36.359Z info: Cart created for user:
+2023-10-07T20:27:06.012Z info: Products found:
+2023-10-07T21:04:11.168Z info: User created:
+2023-10-07T21:04:11.169Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T21:04:22.828Z info: Products found:
+2023-10-07T21:23:25.090Z info: Logger instance:
+2023-10-07T21:23:25.229Z info: Server on port 4000
+2023-10-07T21:24:08.138Z info: User created:
+2023-10-07T21:24:08.140Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T21:24:12.663Z info: Products found:
+2023-10-07T21:47:31.884Z info: User created:
+2023-10-07T21:47:31.887Z info: Cart created for user:
+2023-10-07T21:47:41.975Z info: Products found:
+2023-10-07T22:02:14.924Z info: User created:
+2023-10-07T22:02:14.927Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T22:02:18.625Z info: Products found:
+2023-10-07T22:23:42.403Z info: Logger instance:
+2023-10-07T22:23:42.602Z info: Server on port 4000
+2023-10-07T22:24:10.557Z info: User created:
+2023-10-07T22:24:10.558Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T22:24:14.210Z info: Products found:
+2023-10-07T22:38:26.562Z info: User created:
+2023-10-07T22:38:26.563Z info: Cart created for user: E11000 duplicate key error collection: test.carts index: cid_1 dup key: { cid: null }
+2023-10-07T22:38:30.017Z info: Products found:
+2023-10-07T22:58:59.827Z info: Products found:
+2023-10-07T23:06:53.833Z info: User created:
+2023-10-07T23:06:53.834Z info: Cart created for user:
+2023-10-07T23:06:58.313Z info: Products found:
+2023-10-07T23:09:48.672Z info: Logger instance:
+2023-10-07T23:09:48.776Z info: Server on port 4000
+2023-10-07T23:10:45.922Z info: User created:
+2023-10-07T23:10:45.923Z info: Cart created for user:
+2023-10-07T23:10:45.925Z error: Error creating user: Cannot access 'userWithCart' before initialization
+2023-10-07T23:20:42.415Z info: Logger instance:
+2023-10-07T23:20:42.595Z info: Server on port 4000
+2023-10-07T23:21:27.910Z info: User created:
+2023-10-07T23:21:27.912Z info: Cart created for user:
+2023-10-07T23:21:28.090Z info: User with Cart:
+2023-10-07T23:21:59.180Z info: Products found:
+2023-10-08T00:20:06.595Z info: User created:
+2023-10-08T00:20:06.596Z info: Cart created for user:
+2023-10-08T00:20:06.754Z info: User with Cart:
+2023-10-08T00:21:12.351Z info: Products found:
+2023-10-08T00:22:47.999Z info: User created:
+2023-10-08T00:22:48.001Z info: Cart created for user:
+2023-10-08T00:22:48.159Z info: User with Cart:
+2023-10-08T00:23:11.217Z info: Products found:
+2023-10-08T05:45:33.704Z info: User created:
+2023-10-08T05:45:33.705Z info: Cart created for user:
+2023-10-08T05:45:33.858Z info: User with Cart:
+2023-10-08T05:46:00.515Z info: Products found:
+2023-10-08T05:57:59.102Z info: User created:
+2023-10-08T05:57:59.103Z info: Cart created for user:
+2023-10-08T05:57:59.253Z info: User with Cart:
+2023-10-08T05:58:04.315Z info: Products found:
+2023-10-08T06:02:12.216Z info: User created:
+2023-10-08T06:02:12.217Z info: Cart created for user:
+2023-10-08T06:02:12.371Z info: User with Cart:
+2023-10-08T06:03:34.918Z info: User created:
+2023-10-08T06:03:34.918Z info: Cart created for user:
+2023-10-08T06:03:35.066Z info: User with Cart:
+2023-10-08T06:07:28.778Z info: User created:
+2023-10-08T06:07:28.779Z info: Cart created for user:
+2023-10-08T06:07:28.928Z info: User with Cart:
+2023-10-08T06:14:35.854Z info: User created:
+2023-10-08T06:14:35.855Z info: Cart created for user:
+2023-10-08T06:14:36.002Z info: User with Cart:
+2023-10-08T06:19:29.804Z info: User created:
+2023-10-08T06:19:29.805Z info: Cart created for user:
+2023-10-08T06:19:29.952Z info: User with Cart:
+2023-10-08T06:20:57.502Z info: Products found:
+2023-10-08T06:22:15.803Z info: Logger instance:
+2023-10-08T06:22:15.979Z info: Server on port 4000
+2023-10-08T06:22:40.399Z info: User with Cart:
+2023-10-08T06:24:07.728Z info: User with Cart:
+2023-10-08T06:27:36.243Z info: User with Cart:
+2023-10-08T06:28:58.982Z info: Logger instance:
+2023-10-08T06:28:59.146Z info: Server on port 4000
+2023-10-08T06:30:33.672Z info: User with Cart:
+2023-10-08T06:42:17.169Z info: User with Cart:
+2023-10-08T06:45:35.362Z info: User with Cart:
+2023-10-08T06:52:09.115Z info: User with Cart:
+2023-10-08T07:00:11.167Z info: Logger instance:
+2023-10-08T07:00:11.284Z info: Server on port 4000
+2023-10-08T07:00:32.392Z info: User with Cart:
+2023-10-08T07:02:37.859Z info: User with Cart:
+2023-10-08T07:11:54.406Z info: User with Cart:
+2023-10-08T07:24:56.558Z info: Logger instance:
+2023-10-08T07:24:56.687Z info: Server on port 4000
+2023-10-08T07:26:18.286Z info: User with Cart:
+2023-10-08T07:27:51.297Z info: User with Cart:
+2023-10-08T07:28:58.056Z info: User with Cart:
+2023-10-08T07:34:38.636Z info: User with Cart:
+2023-10-08T07:36:56.660Z info: Products found:
+2023-10-08T07:46:34.819Z info: Logger instance:
+2023-10-08T07:46:34.933Z info: Server on port 4000
+2023-10-08T07:58:26.880Z info: Logger instance:
+2023-10-08T07:58:27.025Z info: Server on port 4000
+2023-10-08T07:58:45.504Z info: User with Cart:
+2023-10-08T12:29:17.547Z info: Logger instance:
+2023-10-08T12:29:17.933Z info: Server on port 4000
+2023-10-08T12:30:53.962Z info: User with Cart:
+2023-10-08T12:45:58.684Z info: Logger instance:
+2023-10-08T12:45:58.841Z info: Server on port 4000
+2023-10-08T12:46:39.552Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-10-08T12:46:40.848Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:12.916Z info: User with Cart:
+2023-10-08T12:47:27.625Z info: Products found:
+2023-10-08T12:47:32.922Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:33.249Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:33.253Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:51.791Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:51.795Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:47:51.799Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:49:35.081Z info: User with Cart:
+2023-10-08T12:50:24.935Z info: Products found:
+2023-10-08T12:52:04.940Z info: User with Cart:
+2023-10-08T12:52:13.223Z info: Products found:
+2023-10-08T12:52:17.642Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:52:17.772Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T12:52:17.921Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:09:38.499Z info: Logger instance:
+2023-10-08T13:09:38.683Z info: Server on port 4000
+2023-10-08T13:12:40.741Z info: User with Cart:
+2023-10-08T13:12:54.424Z info: Products found:
+2023-10-08T13:13:08.385Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:13:08.535Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:13:08.685Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:50:53.132Z info: Logger instance:
+2023-10-08T13:50:53.287Z info: Server on port 4000
+2023-10-08T13:51:57.367Z info: User with Cart:
+2023-10-08T13:52:32.521Z info: Products found:
+2023-10-08T13:52:59.877Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:52:59.928Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:52:59.975Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:59:34.715Z info: User with Cart:
+2023-10-08T13:59:40.840Z info: Products found:
+2023-10-08T13:59:44.468Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:59:44.617Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T13:59:44.768Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:06:02.734Z info: User with Cart:
+2023-10-08T14:06:15.728Z info: Products found:
+2023-10-08T14:06:21.932Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:06:22.079Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:06:22.227Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:15:29.213Z info: Logger instance:
+2023-10-08T14:15:29.326Z info: Server on port 4000
+2023-10-08T14:17:08.449Z info: User with Cart:
+2023-10-08T14:17:23.366Z info: Products found:
+2023-10-08T14:17:31.932Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:17:32.120Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T14:17:32.308Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:24:05.567Z info: Logger instance:
+2023-10-08T19:24:05.773Z info: Server on port 4000
+2023-10-08T19:24:31.677Z info: User with Cart:
+2023-10-08T19:24:41.641Z info: Products found:
+2023-10-08T19:24:44.557Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:24:44.708Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:24:44.855Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:57:17.696Z info: Logger instance:
+2023-10-08T19:57:17.929Z info: Server on port 4000
+2023-10-08T19:57:39.375Z info: User with Cart:
+2023-10-08T19:57:51.895Z info: Products found:
+2023-10-08T19:57:55.355Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:57:55.509Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T19:57:55.661Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:00:31.407Z info: Logger instance:
+2023-10-08T21:00:31.543Z info: Server on port 4000
+2023-10-08T21:00:47.492Z info: User with Cart:
+2023-10-08T21:01:11.163Z info: Products found:
+2023-10-08T21:01:37.822Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:01:37.976Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:01:38.133Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:27:41.906Z info: Logger instance:
+2023-10-08T21:27:42.020Z info: Server on port 4000
+2023-10-08T21:28:09.262Z info: User with Cart:
+2023-10-08T21:29:10.603Z info: Products found:
+2023-10-08T21:29:26.237Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:29:26.238Z error: Value of _id in MongoDB:
+2023-10-08T21:29:26.321Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:29:26.321Z error: Value of _id in MongoDB:
+2023-10-08T21:29:26.403Z info: User found: Cast to ObjectId failed for value "check-auth" (type string) at path "_id" for model "Users"
+2023-10-08T21:29:26.404Z error: Value of _id in MongoDB:
+2023-10-08T21:38:23.483Z info: Logger instance:
+2023-10-08T21:38:23.598Z info: Server on port 4000
+2023-10-08T21:38:41.204Z info: User with Cart:
+2023-10-08T21:38:53.870Z info: Products found:
+2023-10-08T21:38:57.187Z error: Invalid ObjectId:
+2023-10-08T21:38:57.509Z error: Invalid ObjectId:
+2023-10-08T21:38:57.621Z error: Invalid ObjectId:
+2023-10-08T21:43:02.576Z info: Logger instance:
+2023-10-08T21:43:02.677Z info: Server on port 4000
+2023-10-08T21:43:22.571Z info: User with Cart:
+2023-10-08T21:43:27.400Z info: Products found:
+2023-10-08T21:44:46.944Z info: Logger instance:
+2023-10-08T21:44:47.080Z info: Server on port 4000
+2023-10-08T21:46:22.991Z info: User with Cart:
+2023-10-08T21:46:28.522Z info: Products found:
+2023-10-08T21:53:19.155Z info: Products found:
+2023-10-08T21:53:31.757Z info: Products found:
+2023-10-08T22:05:13.173Z info: User with Cart:
+2023-10-08T22:05:27.986Z info: Products found:
+2023-10-08T22:16:31.622Z info: User with Cart:
+2023-10-08T22:16:38.766Z info: Products found:
+2023-10-08T22:38:25.670Z info: Logger instance:
+2023-10-08T22:38:25.825Z info: Server on port 4000
+2023-10-08T22:39:38.273Z info: User with Cart:
+2023-10-08T22:40:01.878Z info: Products found:
+2023-10-08T22:40:37.157Z info: Products found:
+2023-10-08T22:44:48.775Z info: Products found:
+2023-10-08T22:52:02.462Z info: Logger instance:
+2023-10-08T22:52:02.569Z info: Server on port 4000
+2023-10-08T22:53:17.726Z info: User with Cart:
+2023-10-08T22:53:32.025Z info: Products found:
+2023-10-08T23:05:56.022Z info: User with Cart:
+2023-10-08T23:07:29.389Z info: Products found:

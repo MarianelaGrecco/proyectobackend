@@ -16,7 +16,6 @@ import usersRouter from "./routes/users.routes.js";
 import cartRouter from "./routes/cart.routes.js";
 import productsRouter from "./routes/products.routes.js";
 import ticketRouter from "./routes/ticket.routes.js";
-import jwtRouter from "./routes/jwt.routes.js"
 import mockingRouter from "./routes/mocking.routes.js"
 import passport from "passport";
 import "./passportStrategies.js";
@@ -27,6 +26,7 @@ import logger from "./utils/logger.js"
 import session from "express-session"
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express"
+import isAuthenticated from "./authMidlewere.js";
 
 //Configuraciones
 
@@ -107,31 +107,57 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Cookie
-app.use(cookieParser("config.secretCookie"));
 
-//generar info en cookies
-app.get("/crearCookie", (req, res) => {
-  req.logger.info("Creando primera cookie");
-  res.cookie("cookie1", "Primera cookie", { maxAge: 10000 }).send("Creando primera cookie");
+//sessions
+app.use(session({
+  store: new mongoStore({
+    mongoUrl: config. mongo_uri,
+    ttl: 60
+  }),
+secret: config.sessionSecret,
+resave: false,
+saveUninitialized: true,
+cookie: {maxAge: 60000}
+})
+)
+
+app.use(cookieParser(config. secretCookie))
+
+//passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+// Crear cookie después de la autenticación exitosa
+app.get("/crearCookie", isAuthenticated, (req, res) => {
+  const { _id } = req.user;
+  res.cookie("userId", _id.toString(), { maxAge: 10000 }).send("Creando primera cookie");
 });
 
-app.get("/leerCookie", (req, res) => {
-  const { cookie1 } = req.cookies;
-  req.logger.info("Leyendo cookies", { cookie: cookie1 });
-  res.json({ message: "Leyendo cookies", cookie: cookie1 });
+// Leer cookie después de la autenticación exitosa
+app.get("/leerCookie", isAuthenticated, (req, res) => {
+  const { userId } = req.cookies;
+  res.json({ message: "Leyendo cookies", userId });
 });
 
-app.get("/crearcookieFirmada", (req, res) => {
-  req.logger.info("Creando cookie firmada");
-  res.cookie("cookie1Firmada", "1234", { signed: true }).json({ message: "Creando cookie firmada" });
+// Crear cookie firmada después de la autenticación exitosa
+app.get("/crearcookieFirmada", isAuthenticated, (req, res) => {
+  const { _id } = req.user;
+  res.cookie("userIdFirmado", _id.toString(), { signed: true });
+  console.log("Cookie firmada creada:", req.signedCookies);
+  res.json({ message: "Creando cookie firmada" });
 });
 
-app.get('/leerCookieFirmada', (req, res) => {
-  const { cookie1Firmada } = req.signedCookies;
-  req.logger.info("Probando cookie firmada", { cookie1Firmada });
+// Leer cookie firmada después de la autenticación exitosa
+app.get('/leerCookieFirmada', isAuthenticated, (req, res) => {
+  const { userIdFirmado } = req.signedCookies;
+  console.log("Valor de la cookie firmada:", userIdFirmado);
   res.send('Probando');
 });
+
+
+
 
 
 //ServerIO
@@ -149,29 +175,11 @@ io.on("connection", (socket) => {
 });
 
 
-//sessions
-app.use(session({
-    store: new mongoStore({
-      mongoUrl: config. mongo_uri,
-      ttl: 60
-    }),
-  secret: config.sessionSecret,
-  resave: false,
-  saveUninitialized: true,
-  cookie: {maxAge: 60000}
-})
-)
-
-//passport
-app.use(passport.initialize());
-app.use(passport.session());
-
 //Routes
 app.use("/api/products", productsRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/views", viewsRouter);
 app.use("/api/users", usersRouter);
-app.use("/api/jwt", jwtRouter);
 app.use("/api/ticket", ticketRouter);
 app.use("/api/mockingproducts", mockingRouter);
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(spec));

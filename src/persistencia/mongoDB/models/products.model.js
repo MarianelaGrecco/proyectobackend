@@ -2,6 +2,12 @@ import { Schema, model } from "mongoose";
 import mongoose from "mongoose";
 
 const productSchema = new Schema({
+  pid:{
+    type: Schema.Types.ObjectId,
+    required: true,
+    unique: true,
+    default: () => new mongoose.Types.ObjectId().toHexString(),
+  },
   title: {
     type: String,
     required: true,
@@ -31,12 +37,7 @@ const productSchema = new Schema({
     type: Boolean,
     default: true,
   },
-  pid: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    unique: true,
-    default: () => new mongoose.Types.ObjectId().toHexString(),
-  },
+
   thumbnail: [],
 });
 

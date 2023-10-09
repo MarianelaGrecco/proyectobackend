@@ -1,0 +1,25 @@
+2023-10-04T16:21:57.560Z error: Error creating user: cartService is not defined
+2023-10-04T16:23:46.593Z error: Error creating user: cartService is not defined
+2023-10-04T16:30:34.965Z error: Error creating user: cartService is not defined
+2023-10-04T16:31:19.758Z error: Error creating user: cartService is not defined
+2023-10-04T16:38:25.631Z error: Error creating user: usersModel is not defined
+2023-10-04T16:39:45.727Z error: Error creating user: createdUser.save is not a function
+2023-10-04T16:52:40.036Z error: Error creating user: usersService is not a constructor
+2023-10-04T16:56:07.827Z error: Error creating user: createdUser.save is not a function
+2023-10-05T00:30:59.088Z error: Error creating user: createdUser.save is not a function
+2023-10-05T00:39:58.654Z error: Error creating user: createdUser.save is not a function
+2023-10-05T15:13:01.494Z error: Error creating user: cartMongo.findOne is not a function
+2023-10-05T17:00:35.815Z error: Error creating user: cartMongo.findOne is not a function
+2023-10-05T19:09:40.124Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:26:27.659Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:39:19.957Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:44:06.805Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:49:47.497Z error: Error creating user: createdUser.save is not a function
+2023-10-06T15:51:59.835Z error: Error creating user: createdUser.save is not a function
+2023-10-07T23:10:45.925Z error: Error creating user: Cannot access 'userWithCart' before initialization
+2023-10-08T21:29:26.238Z error: Value of _id in MongoDB:
+2023-10-08T21:29:26.321Z error: Value of _id in MongoDB:
+2023-10-08T21:29:26.404Z error: Value of _id in MongoDB:
+2023-10-08T21:38:57.187Z error: Invalid ObjectId:
+2023-10-08T21:38:57.509Z error: Invalid ObjectId:
+2023-10-08T21:38:57.621Z error: Invalid ObjectId:

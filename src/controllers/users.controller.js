@@ -1,5 +1,11 @@
+import mongoose from "mongoose";
+import usersModel from "../persistencia/mongoDB/models/users.model.js";
+import { cartService } from "../services/cart.service.js";
 import { usersService } from "../services/users.service.js";
 import logger from "../utils/logger.js";
+
+
+
 
 //Muestra todo los usuarios enla BD
 export const findAllUsers = async (req, res) => {
@@ -21,10 +27,17 @@ export const findAllUsers = async (req, res) => {
 //Busca un usuario por su pid
 export const findOneUser = async (req, res) => {
   const { uid } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(uid)) {
+    console.error(`Invalid ObjectId: ${uid}`);
+    return res.status(400).json({ error: "Invalid ObjectId" });
+  }
+
   try {
     const user = await usersService.finOneUser(uid);
     if (user) {
       logger.info("User found:", user);
+      logger.error("Value of _id in MongoDB:", user._id);
       res.status(200).json({ message: "User found", user });
     } else {
       logger.info("User not found");
@@ -36,38 +49,99 @@ export const findOneUser = async (req, res) => {
   }
 };
 
-//Crea un usuario en la BD
+
+// Crear un usuario en la BD
 export const createOneUser = async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
+
   try {
     if (!first_name || !last_name || !email || !password) {
       return res.status(400).json({ message: "Missing required data" });
     }
+
     const createdUser = await usersService.createOneUser({
       first_name,
       last_name,
       email,
       password,
     });
-    logger.info("User created:", createdUser);
-    res.render("profile", createdUser)
-    // res.status(200).json({ message: "User created", user: createdUser });
+
+    // Verifica que el usuario se haya creado correctamente
+    if (createdUser instanceof Error) {
+      return res
+        .status(500)
+        .json({ error: "Internal server error - User creation failed" });
+    }
+
+    // Cargar el usuario con el carrito utilizando populate
+    const userWithCart = await usersModel
+      .findById(createdUser._id)
+      .populate("cart");
+
+    if (!userWithCart.cart) {
+      // Crea un nuevo carrito solo si el usuario no tiene uno
+      const newCart = await cartService.createCartForUser(createdUser._id);
+      userWithCart.cart = newCart._id;
+      await userWithCart.save();
+    }
+
+    logger.info("User with Cart:", userWithCart);
+
+    req.login(userWithCart, (err) => {
+      if (err) {
+        logger.error("Error during login:", err);
+        return res.status(500).json({ error: "Internal server error" });
+      }
+
+      // Renderizar la vista de bienvenida
+      res.render("profile", { user: userWithCart });
+    });
   } catch (error) {
     logger.error("Error creating user:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
 
+export const checkAuth = (req, res) => {
+  console.log("Check Auth Endpoint: Authenticated");
+  const { _id, first_name } = req.user;
+
+  res.json({
+    authenticated: true,
+    user: {
+      _id,
+      first_name,
+    }
+  });
+};
+
+
+
+
+
+
+
+
+
 //Trae el perfil con datos del usuario
 export const userProfile = async (req, res) => {
   try {
-    const userData = req.user_id;
+    // Usa req.user en lugar de req.user_id
+    const userData = req.user;
+
+    // Verifica si se obtuvo la información del usuario
+    if (!userData) {
+      return res.status(401).json({ message: "User not authenticated" });
+    }
+
+    // Renderiza la vista con los datos del usuario
     res.render("profile", { first_name: userData.first_name });
   } catch (error) {
     logger.error("Error fetching user profile:", error);
     res.status(500).json({ error });
   }
 };
+
 
 //Subir documentos
 export const uploadDocuments = async (req, res) => {

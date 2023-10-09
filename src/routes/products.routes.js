@@ -9,7 +9,7 @@ productsRouter.get("/:pid/detalle", (req, res) => {
     res.render("product-details", { pid });
   });
   
-productsRouter.get("/", findAllProducts);
+productsRouter.get("/",  findAllProducts);
   
 productsRouter.get("/:pid", findOneProduct);
 

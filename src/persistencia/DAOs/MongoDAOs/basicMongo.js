@@ -12,6 +12,16 @@ export default class BasicMongo {
     }
   }
 
+  async findOne(filter) {
+    try {
+      const result = await this.model.findOne(filter);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
+
   async findOneById(id) {
     try {
       const user = await this.model.findById(id);

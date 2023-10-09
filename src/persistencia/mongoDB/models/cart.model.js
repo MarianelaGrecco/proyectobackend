@@ -2,6 +2,13 @@ import { Schema, model } from "mongoose";
 import mongoose from "mongoose";
 
 const cartSchema = new Schema({
+  cid:{
+    type: Schema.Types.ObjectId,
+    required: true,
+    unique: true,
+    default: () => new mongoose.Types.ObjectId().toHexString(),
+  },
+
   products: {
     type: [
       {
@@ -18,12 +25,6 @@ const cartSchema = new Schema({
     default: [],
   },
 
-  cid: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    unique: true,
-    default: () => new mongoose.Types.ObjectId().toHexString(),
-  },
 });
 
 const cartModel = model("cart", cartSchema);

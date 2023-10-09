@@ -10,14 +10,31 @@ class CartService {
     }
   }
 
-  async createCartForUser(uid) {
+    async createCartForUser(uid) {
+      try {
+        const existingCart = await cartMongo.findOne({ uid });
+        if (existingCart) {
+          return existingCart; // Devolver el carrito existente si hay uno
+        }
+        const newCart = await cartMongo.createOne({ uid, products: [] });
+        return newCart;
+      } catch (error) {
+        throw error;
+      }
+    }
+
+
+  async findCartByUser(uid) {
     try {
-      const newCart = await cartMongo.createOne({ uid, products: [] });
-      return newCart;
+      const cart = await cartMongo.findOne({ uid });
+      return cart;
     } catch (error) {
       throw error;
     }
   }
+
+
+
 
   async addProductToCart(cid, pid, quantity) {
     try {

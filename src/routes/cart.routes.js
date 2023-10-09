@@ -8,16 +8,21 @@ import {
   findOneCart,
   deleteOneCart,
   updateOneCart,
+  addToCart,
 } from "../controllers/cart.controller.js";
+import isAuthenticated from "../authMidlewere.js";
 
 const cartRouter = Router();
 
 // Rutas base para el carrito
 cartRouter.get("/:cid", findOneCart);
-cartRouter.post("/:uid", createCart);
+cartRouter.post("/create/:uid",isAuthenticated, createCart);
+
+cartRouter.post("/add-to-cart", isAuthenticated, addToCart);
+
 
 // Rutas relacionadas con productos en el carrito
-cartRouter.post("/:cid/products/:pid", addProductToCart);
+cartRouter.post("/:cid/products/:pid",isAuthenticated, addProductToCart);
 cartRouter.delete("/:cid/products/:pid", removeProductFromCart);
 cartRouter.put("/:cid/products/:pid", updateProductQuantityInCart);
 
@@ -26,7 +31,7 @@ cartRouter.put("/:cid", updateOneCart);
 cartRouter.delete("/:cid", deleteOneCart);
 
 // Ruta para realizar una compra
-cartRouter.post("/:cid/purchase", processPurchase);
+cartRouter.post("/:cid/purchase", isAuthenticated, processPurchase);
 
 export default cartRouter;
 

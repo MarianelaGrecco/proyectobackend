@@ -1,6 +1,10 @@
 import { productsService } from "../services/products.service.js";
 import logger from "../utils/logger.js";
 
+
+
+
+
 //Muestra todos los productos
 export const findAllProducts = async (req, res) => {
   try {
@@ -11,10 +15,11 @@ export const findAllProducts = async (req, res) => {
       product._id = product._id.toString(); 
     });
    
-    const cid = req.params.cid || null;
-    const pid = req.params.pid || null;
+    const user = req.user;
+    const uid = user ? user._id : null;
+    
       
-    res.render("products", { products, cid, pid });
+    res.render("products", { products, user, uid });
   } catch (error) {
     logger.error("Error finding products:", error);
     res.status(500).json({ error });
@@ -26,17 +31,14 @@ export const findOneProduct = async (req, res) => {
   const { pid } = req.params;
   try {
     const product = await productsService.findOneProduct(pid);
-    if (product) {
+ 
       logger.info("Product found:", product);
-      res.render("product-details", { product });
-    } else {
-      // logger.warn("Product not found");
-      res.status(404).json({ message: "Product not found" });
+
+  
+      res.status(200).json({ message: "Product found", product });
+    } catch (error) {
+      res.status(500).json({ error: "Error finding the product" });
     }
-  } catch (error) {
-    logger.error("Error finding product:", error);
-    res.status(500).json({ error });
-  }
 };
 
 //Crea un nuevo producto
@@ -94,3 +96,7 @@ export const deleteOneProduct = async (req, res) => {
     res.status(500).json({ error });
   }
 };
+
+
+
+

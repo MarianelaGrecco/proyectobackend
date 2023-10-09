@@ -17,7 +17,7 @@ class UsersService {
       const response = await usersMongo.findOneById(id);
       return response;
     } catch (error) {
-      return error;
+      throw error;
     }
   }
 
@@ -25,12 +25,23 @@ class UsersService {
     try {
       const hashPassword = await hashData(user.password);
       const newUser = { ...user, password: hashPassword };
+
+      console.log("User Object:", newUser);
       const response = await usersMongo.createOne(newUser);
-      return response;
+  
+      if (response) {
+        const createdUser = response; 
+      return createdUser;
+      } else {
+        console.error('Response from createOneUser:', response);
+        return response; 
+      }
     } catch (error) {
+      console.error('Error in createOneUser:', error);
       return error;
     }
   }
+  
 
   async userProfileData(id) {
     try {

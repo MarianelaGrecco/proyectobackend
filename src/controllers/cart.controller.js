@@ -1,13 +1,14 @@
 import { cartService } from "../services/cart.service.js";
 import logger from "../utils/logger.js";
 import mongoose from "mongoose";
+import loadUserCart from "../passportStrategies.js"
+
 
 // Crear un nuevo carrito
 export const createCart = async (req, res) => {
   const { uid } = req.params;
   try {
-    console.log("Request to create a cart received.");
-    const newCart = await cartService.createCartForUser(uid);
+    const newCart = await cartService.createCartForUser ({ uid: createdUser.uid });
     logger.info("Cart created for user:", uid);
     res.status(201).json({ message: "Cart created", cart: newCart });
   } catch (error) {
@@ -36,30 +37,82 @@ export const findOneCart = async (req, res) => {
   }
 };
 
-// Agregar un producto al carrito
 
-export const addProductToCart = async (req, res) => {
-  const { cid, pid } = req.params;
-  const { quantity } = req.body;
-
-  console.log("Adding product to cart:", cid, pid, quantity);
-  if (!quantity) {
-    logger.warning(
-      "Missing information to add the product to the cart:",
-      req.body
-    );
-    return res.status(400).json({ message: "Missing information" });
-  }
+export const addToCart = async (req, res) => {
   try {
-    console.log("Inside try block");
-    const updatedCart = await cartService.addProductToCart(cid, pid, quantity);
-    logger.info("Product added to cart:", pid, "in cart:", cid);
-    res.status(200).json({ message: "Product added to cart", cart: updatedCart });
+    console.log("Request Body:", req.body);
+  
+      if (!req.isAuthenticated()) {
+      return res.status(401).json({ error: "Usuario no autenticado" });
+    };
+
+    const { pid, quantity } = req.body;
+
+    // Verificar que tengas la información necesaria (productId, quantity)
+    if (!pid || !quantity) {
+      return res.status(400).json({ error: "Falta información" });
+    }
+
+    // Obtener el usuario autenticado
+    const user = req.user;
+
+    // Asegurarse de que el usuario tenga un carrito
+    if (!user.cart) {
+      return res.status(500).json({ error: "Usuario sin carrito" });
+    }
+
+    // Realizar las operaciones necesarias para agregar productos al carrito
+    const updatedCart = await cartService.addProductToCart(user.cart, pid, quantity);
+
+    console.log("User:", req.user);
+    console.log("Updated Cart:", updatedCart);
+
+
+    // Respuesta exitosa
+    return res.status(200).json({ message: "Producto agregado al carrito", cart: updatedCart });
   } catch (error) {
-    logger.error("Error adding product to cart:", pid, "in cart:", cid, error);
-    res.status(500).json({ error });
+    console.error("Error al agregar producto al carrito:", error);
+    return res.status(500).json({ error: "Error interno del servidor" });
   }
 };
+
+
+
+// Agregar un producto al carrito
+export const addProductToCart = async (req, res) => {
+  try {
+    // Verificar que el usuario esté autenticado
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ error: "Usuario no autenticado" });
+    }
+
+    const { uid, pid } = req.params;
+    const { quantity } = req.body;
+
+    // Verificar que tengas la información necesaria (pid, quantity)
+    if (!pid || !quantity) {
+      return res.status(400).json({ error: "Falta información" });
+    }
+
+    // Obtener el usuario autenticado
+    const user = req.user;
+
+    // Asegurarse de que el usuario tenga un carrito
+    if (!user.cart) {
+      return res.status(500).json({ error: "Usuario sin carrito" });
+    }
+
+    // Realizar las operaciones necesarias para agregar productos al carrito
+    const updatedCart = await cartService.addProductToCart(user.cart, pid, quantity);
+
+    // Respuesta exitosa
+    return res.status(200).json({ message: "Producto agregado al carrito", cart: updatedCart });
+  } catch (error) {
+    console.error("Error al agregar producto al carrito:", error);
+    return res.status(500).json({ error: "Error interno del servidor" });
+  }
+};
+
 
 // Eliminar un producto del carrito
 export const removeProductFromCart = async (req, res) => {
