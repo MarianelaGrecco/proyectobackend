@@ -28,6 +28,7 @@ import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express"
 import isAuthenticated from "./authMidlewere.js";
 
+
 //Configuraciones
 
 const app = express();
@@ -72,7 +73,7 @@ const server = app.listen(PORT, () => {
 });
 
 
-app.use(express.static(path.join(__dirname, "./public")));
+app.use(express.static(path.join(__dirname, "./Public")));
 app.use(errorHandler)
 
 //swagger
@@ -112,12 +113,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
   store: new mongoStore({
     mongoUrl: config. mongo_uri,
-    ttl: 60
+    ttl: 60 * 60
   }),
 secret: config.sessionSecret,
 resave: false,
 saveUninitialized: true,
-cookie: {maxAge: 60000}
+cookie: {maxAge: 60 * 60 * 1000}
 })
 )
 
@@ -176,14 +177,15 @@ io.on("connection", (socket) => {
 
 
 //Routes
-app.use("/api/products", productsRouter);
-app.use("/api/cart", cartRouter);
 app.use("/api/views", viewsRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/products", productsRouter);
+app.use("/api/cart", cartRouter);
 app.use("/api/ticket", ticketRouter);
 app.use("/api/mockingproducts", mockingRouter);
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(spec));
 
+app.use("/client.js", express.static(path.join(__dirname, "./Public/client.js")));
 
 app.post("/upload", upload.single("product"), (req, res) => {
   req.logger.info("Imagen subida");

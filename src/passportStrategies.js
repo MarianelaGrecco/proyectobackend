@@ -8,9 +8,9 @@ import config from "./config/config.js";
 
 
 // Función para cargar el carrito del usuario
-export const loadUserCart = async (uid) => {
+export const loadUserCart = async (id) => {
   try {
-    const user = await usersModel.findOne({_id: uid});
+    const user = await usersModel.findOne({_id: id});
     if (user && user.cart) {
       const cart = await cartModel.findById(user.cart);
       return cart;
@@ -90,6 +90,12 @@ passport.use(
           if (loginErr) {
             return done(loginErr);
           }
+
+
+          console.log('Session after login:', req.session);
+          console.log('User after login:', req.user);
+
+
           return done(null, newUser)
         });
       } catch (error) {
@@ -101,15 +107,26 @@ passport.use(
 );
 
 
-
 passport.serializeUser((user, done) => {
+  console.log('SerializeUser:', user._id);
   done(null, user._id);
 });
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await usersModel.findById(id);
-    user.cart = await loadUserCart(user.uid);
+    console.log('DeserializeUser:', id);
+
+    // Verificar si el id es "check-auth" antes de buscar en la base de datos
+    if (id === "check-auth") {
+      return done(null, null);  
+    }
+
+    const user = await usersModel.findOne({ _id: id });
+
+    if (!user) {
+      return done(null, null);
+    }
+
     done(null, user);
   } catch (error) {
     done(error, null);

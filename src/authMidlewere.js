@@ -1,11 +1,16 @@
 const isAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
+    console.log("Usuario autenticado");
     return next();
   } else {
-    // Redirigir o manejar la no autenticación según tus necesidades
-    res.status(401).json({ message: "User not authenticated" });
-  }
-};
+    console.log("Usuario no autenticado");
+    return res.status(401).json({
+      authenticated: false,
+      message: "User not authenticated"
+  })
+}
+}
+
 
 export default isAuthenticated;
 

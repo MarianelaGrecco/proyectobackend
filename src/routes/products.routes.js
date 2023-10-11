@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { createOneProduct, findAllProducts, findOneProduct, updateOneProduct, deleteOneProduct} from "../controllers/products.controller.js";
+import isAuthenticated from "../authMidlewere.js";
 
 const productsRouter = Router();
 
@@ -9,7 +10,8 @@ productsRouter.get("/:pid/detalle", (req, res) => {
     res.render("product-details", { pid });
   });
   
-productsRouter.get("/",  findAllProducts);
+  productsRouter.get("/", isAuthenticated, findAllProducts);
+  
   
 productsRouter.get("/:pid", findOneProduct);
 

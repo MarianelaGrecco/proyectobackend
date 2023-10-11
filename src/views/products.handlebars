@@ -1,5 +1,9 @@
 <h1>Lista de Productos</h1>
-<div class="row">
+<div class="row" id="productsContainer">
+  <!-- La lista de productos se renderizará aquí -->
+</div>
+
+<script id="product-template" type="text/x-handlebars-template">
   {{#each products}}
     <div class="col-md-4">
       <div class="card">
@@ -10,22 +14,23 @@
           <p><strong>Categoría:</strong> {{category}}</p>
           <p><strong>Stock:</strong> {{stock}}</p>
 
-          <a href="/products/{{pid}}" class="btn btn-primary">Ver detalles</a>
-
           <!-- Formulario para agregar al carrito -->
-
-         <form id="addToCartForm" method="POST" action="/api/cart/add-to-cart">
-  <input type="hidden" name="pid" value="{{pid}}" />
-  <label for="quantityInput">Cantidad:</label>
-  <input type="number" id="quantityInput" name="quantity" value="1" min="1" />
-  <button type="submit">Agregar al carrito</button>
-</form>
-
-          <script src="/client.js"></script>
+          <form class="addToCartForm" data-pid="{{pid}}">
+            <label for="quantityInput">Cantidad:</label>
+            <input type="number" id="quantityInput" name="quantity" value="1" min="1" />
+            <button type="submit">Agregar al carrito</button>
+          </form>
         </div>
       </div>
     </div>
   {{/each}}
-</div>
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+<script src="/client.js"></script>
+
+
 
 

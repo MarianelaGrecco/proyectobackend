@@ -1,30 +1,27 @@
 import { productsService } from "../services/products.service.js";
 import logger from "../utils/logger.js";
-
+import { productsMongo } from "../persistencia/DAOs/MongoDAOs/productsMongo.js";
 
 
 
 
 //Muestra todos los productos
+
 export const findAllProducts = async (req, res) => {
   try {
-    const products = await productsService.findAllProducts();
-    logger.info("Products found:", products); 
-   
-    products.forEach(product => {
-      product._id = product._id.toString(); 
-    });
-   
+    const products = await productsMongo.findAllProducts();
+    console.log("Products found:", products);
     const user = req.user;
     const uid = user ? user._id : null;
-    
-      
-    res.render("products", { products, user, uid });
+
+    res.json({ products, user, uid });
   } catch (error) {
-    logger.error("Error finding products:", error);
-    res.status(500).json({ error });
+    console.error("Error finding products:", error);
+    return res.status(500).json({ success: false, error: "Internal Server Error", message: error.message });
   }
 };
+
+
 
 //Busca un producto por su id
 export const findOneProduct = async (req, res) => {

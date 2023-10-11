@@ -3,8 +3,44 @@ import usersModel from "../persistencia/mongoDB/models/users.model.js";
 import { cartService } from "../services/cart.service.js";
 import { usersService } from "../services/users.service.js";
 import logger from "../utils/logger.js";
+import isAuthenticated from "../authMidlewere.js";
+import passport from "passport";
 
 
+
+passport.serializeUser((user, done) => {
+  console.log('SerializeUser:', user._id);
+  done(null, user._id);
+});
+
+
+export const checkAuth = (req, res) => {
+  try {
+  
+    if (req.isAuthenticated()) {
+      
+      const { _id } = req.user;
+      
+      console.log(`Usuario autenticado: ${_id}`);
+      res.status(200).json({
+        authenticated: true,
+        user: { _id }
+      });
+    } else {
+      console.log("Usuario no autenticado");
+      res.status(401).json({
+        authenticated: false,
+        message: "User not authenticated"
+      });
+    }
+  } catch (error) {
+    console.error("Error in checkAuth:", error);
+    res.status(500).json({
+      authenticated: false,
+      message: "Internal Server Error"
+    });
+  }
+};
 
 
 //Muestra todo los usuarios enla BD
@@ -28,10 +64,10 @@ export const findAllUsers = async (req, res) => {
 export const findOneUser = async (req, res) => {
   const { uid } = req.params;
 
-  if (!mongoose.Types.ObjectId.isValid(uid)) {
-    console.error(`Invalid ObjectId: ${uid}`);
-    return res.status(400).json({ error: "Invalid ObjectId" });
-  }
+  // if (!mongoose.Types.ObjectId.isValid(uid)) {
+  //   console.error(`Invalid ObjectId: ${uid}`);
+  //   return res.status(400).json({ error: "Invalid ObjectId" });
+  // }
 
   try {
     const user = await usersService.finOneUser(uid);
@@ -101,26 +137,6 @@ export const createOneUser = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
-
-export const checkAuth = (req, res) => {
-  console.log("Check Auth Endpoint: Authenticated");
-  const { _id, first_name } = req.user;
-
-  res.json({
-    authenticated: true,
-    user: {
-      _id,
-      first_name,
-    }
-  });
-};
-
-
-
-
-
-
-
 
 
 //Trae el perfil con datos del usuario

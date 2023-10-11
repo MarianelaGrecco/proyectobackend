@@ -8,7 +8,7 @@ import loadUserCart from "../passportStrategies.js"
 export const createCart = async (req, res) => {
   const { uid } = req.params;
   try {
-    const newCart = await cartService.createCartForUser ({ uid: createdUser.uid });
+    const newCart = await cartService.createCartForUser ({ uid });
     logger.info("Cart created for user:", uid);
     res.status(201).json({ message: "Cart created", cart: newCart });
   } catch (error) {

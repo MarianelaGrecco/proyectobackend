@@ -1,15 +1,26 @@
-const socket = io();
+// document.addEventListener("DOMContentLoaded", () => {
+//   const socket = io();
+  
+//   // Seleccionar todos los formularios con la clase "socketForm"
+//   const forms = document.querySelectorAll('.socketForm');
 
-const formProduct = document.getElementById("formProducto");
+//   forms.forEach(form => {
+//     form.addEventListener("submit", (e) => {
+//       e.preventDefault();
+//       const prodsIterator = new FormData(e.target);
+//       const prod = Object.fromEntries(prodsIterator);
+//       socket.emit("nuevoProducto", { prod });
+//       // Limpiar el formulario
+//       form.reset();
+//     });
+//   });
 
-formProduct.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const prodsIterator = new FormData(e.target);
-  const prod = Object.fromEntries(prodsIterator);
-  socket.emit("nuevoProducto", { prod });
-  // Limpiar el formulario
-  formProduct.reset();
-});
+//   if (forms.length === 0) {
+//     console.error("No forms with class 'socketForm' found");
+//   }
+// });
+
+
 
 
 

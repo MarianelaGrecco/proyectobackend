@@ -15,6 +15,9 @@ import isAuthenticated from "../authMidlewere.js";
 
 const userRouter = Router();
 
+
+userRouter.get('/check-auth', isAuthenticated, checkAuth);
+
 userRouter.get("/", findAllUsers);
 
 userRouter.get("/:uid", findOneUser);
@@ -44,11 +47,9 @@ userRouter.post(
   }
 );
 
-userRouter.get('/check-auth', isAuthenticated, checkAuth);
+userRouter.post('/:uid/documents', uploadDocuments);
 
-userRouter.post('/:uid/documents', isAuthenticated, uploadDocuments);
-
-userRouter.put("/:uid/premium", isAuthenticated, updatePremiumStatus);
+userRouter.put("/:uid/premium", updatePremiumStatus);
 
 
 userRouter.get('/logout', logoutUser);
