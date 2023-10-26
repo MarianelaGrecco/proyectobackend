@@ -41,40 +41,42 @@ export const findOneCart = async (req, res) => {
 export const addToCart = async (req, res) => {
   try {
     console.log("Request Body:", req.body);
-  
-      if (!req.isAuthenticated()) {
+
+    if (!req.isAuthenticated()) {
+      console.log("Usuario no autenticado");
       return res.status(401).json({ error: "Usuario no autenticado" });
-    };
+    }
 
     const { pid, quantity } = req.body;
 
     // Verificar que tengas la información necesaria (productId, quantity)
     if (!pid || !quantity) {
+      console.log("Falta información");
       return res.status(400).json({ error: "Falta información" });
     }
 
     // Obtener el usuario autenticado
     const user = req.user;
+    console.log("Usuario autenticado:", user);
 
     // Asegurarse de que el usuario tenga un carrito
     if (!user.cart) {
+      console.log("Usuario sin carrito");
       return res.status(500).json({ error: "Usuario sin carrito" });
     }
 
     // Realizar las operaciones necesarias para agregar productos al carrito
     const updatedCart = await cartService.addProductToCart(user.cart, pid, quantity);
-
-    console.log("User:", req.user);
     console.log("Updated Cart:", updatedCart);
 
-
     // Respuesta exitosa
-    return res.status(200).json({ message: "Producto agregado al carrito", cart: updatedCart });
+    return res.status(200).json({ success: true, message: "Producto agregado al carrito" });
   } catch (error) {
     console.error("Error al agregar producto al carrito:", error);
-    return res.status(500).json({ error: "Error interno del servidor" });
+    return res.status(500).json({ error: `Error interno del servidor: ${error.message}`  });
   }
 };
+
 
 
 

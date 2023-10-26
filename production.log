@@ -42,3 +42,170 @@
 2023-10-11T15:37:18.974Z info: User with Cart:
 2023-10-11T15:43:33.272Z info: Logger instance:
 2023-10-11T15:43:33.487Z info: Server on port 4000
+2023-10-13T14:08:44.769Z info: Logger instance:
+2023-10-13T14:08:44.878Z info: Server on port 4000
+2023-10-13T14:12:35.188Z info: User found: Cast to ObjectId failed for value "singup" (type string) at path "_id" for model "Users"
+2023-10-13T14:12:35.190Z error: Value of _id in MongoDB:
+2023-10-13T14:12:41.882Z info: User found: Cast to ObjectId failed for value "singup" (type string) at path "_id" for model "Users"
+2023-10-13T14:12:41.883Z error: Value of _id in MongoDB:
+2023-10-13T14:12:42.548Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-10-13T14:12:42.549Z error: Value of _id in MongoDB:
+2023-10-13T14:12:42.883Z info: User found: Cast to ObjectId failed for value "signup" (type string) at path "_id" for model "Users"
+2023-10-13T14:12:42.884Z error: Value of _id in MongoDB:
+2023-10-13T14:13:58.291Z info: Logger instance:
+2023-10-13T14:13:58.431Z info: Server on port 4000
+2023-10-13T14:18:35.756Z info: User with Cart:
+2023-10-13T14:30:06.366Z info: Logger instance:
+2023-10-13T14:30:06.514Z info: Server on port 4000
+2023-10-13T14:31:24.278Z info: User with Cart:
+2023-10-13T14:34:01.817Z info: User with Cart:
+2023-10-13T14:44:26.585Z info: Logger instance:
+2023-10-13T14:44:26.833Z info: Server on port 4000
+2023-10-13T15:03:43.717Z info: Logger instance:
+2023-10-13T15:03:43.858Z info: Server on port 4000
+2023-10-13T15:04:50.395Z info: Logger instance:
+2023-10-13T15:04:50.520Z info: Server on port 4000
+2023-10-13T15:05:25.736Z info: User with Cart:
+2023-10-13T16:15:04.470Z info: Logger instance:
+2023-10-13T16:15:04.566Z info: Server on port 4000
+2023-10-13T16:15:23.260Z info: User with Cart:
+2023-10-13T16:18:40.419Z info: Logger instance:
+2023-10-13T16:18:40.540Z info: Server on port 4000
+2023-10-13T16:19:06.966Z info: Logger instance:
+2023-10-13T16:19:07.100Z info: Server on port 4000
+2023-10-13T16:19:41.356Z info: Logger instance:
+2023-10-13T16:19:41.456Z info: Server on port 4000
+2023-10-13T16:19:59.130Z info: User with Cart:
+2023-10-13T16:23:22.598Z info: Logger instance:
+2023-10-13T16:23:22.742Z info: Server on port 4000
+2023-10-13T16:24:19.634Z info: User with Cart:
+2023-10-13T16:29:46.397Z info: Logger instance:
+2023-10-13T16:29:46.646Z info: Server on port 4000
+2023-10-13T16:30:16.817Z info: User with Cart:
+2023-10-13T16:31:00.037Z info: Logger instance:
+2023-10-13T16:31:00.193Z info: Server on port 4000
+2023-10-13T16:32:36.547Z info: User with Cart:
+2023-10-13T16:39:40.994Z info: Logger instance:
+2023-10-13T16:39:41.128Z info: Server on port 4000
+2023-10-13T16:48:59.048Z info: Logger instance:
+2023-10-13T16:48:59.209Z info: Server on port 4000
+2023-10-25T13:00:39.265Z info: Logger instance:
+2023-10-25T13:00:39.456Z info: Server on port 4000
+2023-10-25T13:02:43.438Z info: User with Cart:
+2023-10-25T13:22:35.902Z info: Logger instance:
+2023-10-25T13:22:36.013Z info: Server on port 4000
+2023-10-25T13:26:48.606Z info: User with Cart:
+2023-10-25T14:44:43.668Z info: Logger instance:
+2023-10-25T14:44:43.803Z info: Server on port 4000
+2023-10-25T14:51:07.569Z info: Logger instance:
+2023-10-25T14:51:07.899Z info: Server on port 4000
+2023-10-25T14:52:19.567Z info: User with Cart:
+2023-10-25T14:54:33.030Z info: Logger instance:
+2023-10-25T14:54:33.213Z info: Server on port 4000
+2023-10-25T14:55:37.613Z info: User with Cart:
+2023-10-25T15:00:07.689Z info: Logger instance:
+2023-10-25T15:00:08.032Z info: Server on port 4000
+2023-10-25T15:00:25.071Z info: Logger instance:
+2023-10-25T15:00:25.172Z info: Server on port 4000
+2023-10-25T15:02:27.248Z info: Logger instance:
+2023-10-25T15:02:27.362Z info: Server on port 4000
+2023-10-25T15:02:55.414Z info: User with Cart:
+2023-10-25T15:06:51.874Z info: Logger instance:
+2023-10-25T15:06:51.985Z info: Server on port 4000
+2023-10-25T15:23:34.517Z info: Logger instance:
+2023-10-25T15:23:34.626Z info: Server on port 4000
+2023-10-25T15:24:08.025Z info: User with Cart:
+2023-10-25T15:28:49.101Z info: Logger instance:
+2023-10-25T15:28:49.196Z info: Server on port 4000
+2023-10-25T15:29:24.677Z info: User with Cart:
+2023-10-25T15:33:49.974Z info: Logger instance:
+2023-10-25T15:33:50.105Z info: Server on port 4000
+2023-10-25T15:54:13.974Z info: Logger instance:
+2023-10-25T15:54:14.074Z info: Server on port 4000
+2023-10-25T16:29:34.583Z info: Logger instance:
+2023-10-25T16:29:34.677Z info: Server on port 4000
+2023-10-25T16:30:21.831Z info: User with Cart:
+2023-10-25T16:34:15.933Z info: Logger instance:
+2023-10-25T16:34:16.051Z info: Server on port 4000
+2023-10-25T16:40:21.718Z info: Logger instance:
+2023-10-25T16:40:21.816Z info: Server on port 4000
+2023-10-25T16:40:50.072Z info: Logger instance:
+2023-10-25T16:40:50.210Z info: Server on port 4000
+2023-10-25T20:03:51.372Z info: Logger instance:
+2023-10-25T20:03:51.500Z info: Server on port 4000
+2023-10-25T21:19:12.600Z info: Logger instance:
+2023-10-25T21:19:12.826Z info: Server on port 4000
+2023-10-25T21:19:51.647Z info: User with Cart:
+2023-10-25T21:28:34.179Z info: Logger instance:
+2023-10-25T21:28:34.312Z info: Server on port 4000
+2023-10-25T21:29:28.901Z info: User with Cart:
+2023-10-25T21:34:51.668Z info: Logger instance:
+2023-10-25T21:34:51.847Z info: Server on port 4000
+2023-10-25T21:35:27.292Z info: User with Cart:
+2023-10-25T21:37:46.096Z info: Logger instance:
+2023-10-25T21:37:46.232Z info: Server on port 4000
+2023-10-25T21:42:11.069Z info: Logger instance:
+2023-10-25T21:42:11.203Z info: Server on port 4000
+2023-10-25T21:43:03.548Z info: User with Cart:
+2023-10-25T21:59:01.003Z info: Logger instance:
+2023-10-25T21:59:01.119Z info: Server on port 4000
+2023-10-25T21:59:46.666Z info: User with Cart:
+2023-10-25T22:18:56.621Z info: Logger instance:
+2023-10-25T22:18:56.729Z info: Server on port 4000
+2023-10-25T22:20:46.440Z info: User with Cart:
+2023-10-25T22:22:34.725Z info: Logger instance:
+2023-10-25T22:22:34.868Z info: Server on port 4000
+2023-10-25T22:22:59.825Z info: User with Cart:
+2023-10-25T22:24:26.664Z info: Logger instance:
+2023-10-25T22:24:26.806Z info: Server on port 4000
+2023-10-25T22:24:53.786Z info: User with Cart:
+2023-10-25T22:33:14.427Z info: Logger instance:
+2023-10-25T22:33:14.593Z info: Server on port 4000
+2023-10-25T22:43:21.074Z info: Logger instance:
+2023-10-25T22:43:21.180Z info: Server on port 4000
+2023-10-25T22:44:16.423Z info: User with Cart:
+2023-10-25T22:49:58.980Z info: Logger instance:
+2023-10-25T22:49:59.130Z info: Server on port 4000
+2023-10-26T00:24:13.500Z info: Logger instance:
+2023-10-26T00:24:13.605Z info: Server on port 4000
+2023-10-26T00:25:01.233Z info: User with Cart:
+2023-10-26T00:30:48.960Z info: User with Cart:
+2023-10-26T13:04:18.005Z info: Logger instance:
+2023-10-26T13:04:18.128Z info: Server on port 4000
+2023-10-26T13:04:57.715Z info: User with Cart:
+2023-10-26T13:14:46.769Z info: Cart found:
+2023-10-26T13:20:37.537Z info: Logger instance:
+2023-10-26T13:20:37.644Z info: Server on port 4000
+2023-10-26T13:21:26.489Z info: User with Cart:
+2023-10-26T13:30:57.176Z info: Logger instance:
+2023-10-26T13:30:57.297Z info: Server on port 4000
+2023-10-26T14:29:53.963Z info: Logger instance:
+2023-10-26T14:29:54.102Z info: Server on port 4000
+2023-10-26T14:36:10.738Z info: User with Cart:
+2023-10-26T15:02:33.236Z info: Logger instance:
+2023-10-26T15:02:33.345Z info: Server on port 4000
+2023-10-26T15:03:21.453Z info: User with Cart:
+2023-10-26T15:12:19.016Z info: Logger instance:
+2023-10-26T15:12:19.114Z info: Server on port 4000
+2023-10-26T15:12:44.212Z info: User with Cart:
+2023-10-26T15:25:54.608Z info: Logger instance:
+2023-10-26T15:25:54.709Z info: Server on port 4000
+2023-10-26T15:26:16.386Z info: User with Cart:
+2023-10-26T15:33:33.512Z info: Logger instance:
+2023-10-26T15:33:33.626Z info: Server on port 4000
+2023-10-26T15:34:02.737Z info: User with Cart:
+2023-10-26T15:35:13.655Z info: Logger instance:
+2023-10-26T15:35:13.772Z info: Server on port 4000
+2023-10-26T15:41:25.017Z info: User with Cart:
+2023-10-26T15:57:07.931Z info: Logger instance:
+2023-10-26T15:57:08.203Z info: Server on port 4000
+2023-10-26T15:57:33.359Z info: User with Cart:
+2023-10-26T16:22:31.637Z info: Logger instance:
+2023-10-26T16:22:31.848Z info: Server on port 4000
+2023-10-26T16:23:01.852Z info: User with Cart:
+2023-10-26T16:27:07.135Z info: Logger instance:
+2023-10-26T16:27:07.278Z info: Server on port 4000
+2023-10-26T16:29:02.170Z info: User with Cart:
+2023-10-26T16:46:00.485Z info: Logger instance:
+2023-10-26T16:46:00.644Z info: Server on port 4000
+2023-10-26T16:46:18.772Z info: User with Cart:

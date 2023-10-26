@@ -1,8 +1,36 @@
 import { productsService } from "../services/products.service.js";
 import logger from "../utils/logger.js";
 import { productsMongo } from "../persistencia/DAOs/MongoDAOs/productsMongo.js";
+import Handlebars from "handlebars";
 
+const renderProductsView = (products) => {
+  const source = `
+    <h1>Lista de Productos</h1>
+    <div class="row" id="productsContainer">
+      {{#each products}}
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h2>{{title}}</h2>
+              <p><strong>Descripción:</strong> {{description}}</p>
+              <p><strong>Precio:</strong> $ {{price}}</p>
+              <p><strong>Categoría:</strong> {{category}}</p>
+              <p><strong>Stock:</strong> {{stock}}</p>
+              <!-- Formulario para agregar al carrito -->
+              <form class="addToCartForm" data-pid="{{{_id}}}">
+              <label for="quantityInput">Cantidad:</label>
+              <input type="number" id="quantityInput" name="quantity" value="1" min="1" />
+              <button type="submit">Agregar al carrito</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>`;
 
+  const template = Handlebars.compile(source);
+  return template({ products });
+};
 
 
 //Muestra todos los productos
@@ -11,13 +39,17 @@ export const findAllProducts = async (req, res) => {
   try {
     const products = await productsMongo.findAllProducts();
     console.log("Products found:", products);
-    const user = req.user;
-    const uid = user ? user._id : null;
 
-    res.json({ products, user, uid });
+    // Renderiza la vista y envía la respuesta al cliente
+    const html = renderProductsView(products);
+    res.status(200).send(html);
   } catch (error) {
     console.error("Error finding products:", error);
-    return res.status(500).json({ success: false, error: "Internal Server Error", message: error.message });
+    return res.status(500).json({
+      success: false,
+      error: "Internal Server Error",
+      message: error.message,
+    });
   }
 };
 

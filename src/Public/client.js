@@ -1,95 +1,99 @@
-document.addEventListener("DOMContentLoaded", () => {
-
+document.addEventListener("DOMContentLoaded", async () => {
   let productsContainer;
-  
-  fetch("/api/users/check-auth", {
-    method: "GET",
-    credentials: "include",
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("Check Auth Response:", data);
 
-      if (data.authenticated) {
-        return fetch("/api/products", {
-          method: "GET",
-          credentials: "include",
-        });
-      } else {
-        console.log("Usuario no autenticado. Redirigiendo a la página de inicio de sesión...");
-        // Puedes redirigir a la página de inicio de sesión u tomar otras medidas
-        throw new Error("Usuario no autenticado");
-      }
-    })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      if (data.error) {
-        throw new Error(data.error);
-      }
-      // Acceder a los productos en la respuesta
-  const products = data.products;
+  try {
+    const authResponse = await fetch("/api/users/check-auth", { method: "GET", credentials: "include" });
+    const authData = await handleErrors(authResponse);
 
-  // ...
+    if (!authData.authenticated) {
+      throw new Error("Usuario no autenticado");
+    }
 
-  // Agregar el HTML directamente al contenedor de productos
-  productsContainer = document.getElementById("productsContainer");
+    const productsResponse = await fetch("/api/products", { method: "GET", credentials: "include" });
+    const productsData = await handleErrors(productsResponse);
 
-  if (productsContainer) {
-    // Utilizar la plantilla Handlebars para renderizar los productos
+    if (productsData.error) {
+      throw new Error(productsData.error);
+    }
+
+    const products = productsData.products;
+    productsContainer = document.getElementById("productsContainer");
+
+    if (!productsContainer) {
+      console.error("No se encontró el contenedor de productos en el DOM.");
+      return;
+    }
+
     const source = document.getElementById("product-template").innerHTML;
     const template = Handlebars.compile(source);
     const html = template({ products });
-
-    // Insertar el HTML en el contenedor de productos
     productsContainer.innerHTML = html;
 
-        // Event listener para el formulario de agregar al carrito
-        productsContainer.querySelectorAll(".addToCartForm").forEach((form) => {
-          form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            console.log("Formulario enviado...");
-            const pid = form.dataset.pid;
-            const quantity = form.querySelector("#quantityInput").value;
+    // Agregar al carrito desde el botón
+async function addToCart (pid) {
+  console.log("Botón de agregar al carrito clicado");
 
-            // Hacer la solicitud para agregar al carrito
-            fetch(`/api/cart/add-to-cart?pid=${pid}&quantity=${quantity}`, {
-              method: "POST",
-              credentials: "include",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
-              .then((addToCartResponse) => {
-                // Manejar la respuesta de agregar al carrito...
-              })
-              .catch((addToCartError) => {
-                console.error("Error al agregar al carrito:", addToCartError);
-              });
-          });
-        });
-      }
-    })
-    .catch((error) => {
-      console.error("Error al verificar la autenticación o al obtener productos:", error);
-    });
-});
-
+  const quantity = document.getElementById("quantityInput").value;
 
   
+      console.log("Product ID:", pid);
+      console.log("Quantity:", quantity);
+  
+      try {
+        // Hacer la solicitud para agregar al carrito
+        const response = await fetch(`/api/cart/add-to-cart?pid=${pid}&quantity=${quantity}`, {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+  
+        const data = await response.json();
+
+        if (data.success) {
+          console.log("Producto agregado al carrito correctamente");
     
+  
+          const cartResponse = await fetch("/api/cart", {
+            method: "GET",
+            credentials: "include",
+          });
+    
+          const cartData = await cartResponse.json();
+    
+          const cartContainer = document.getElementById("cartContainer");
+          cartContainer.innerHTML = ""; 
+    
+          cartData.cart.products.forEach((product) => {
+            const productElement = document.createElement("div");
+            productElement.textContent = `${product.title} - Cantidad: ${product.quantity}`;
+            cartContainer.appendChild(productElement);
+          });
+        } else {
+          console.error("Error al agregar al carrito:", data.message);
+        }
+      } catch (error) {
+        console.error("Error al agregar al carrito:", error);
+      }
+    }
+
+  } catch (error) {
+    console.error("Error en la carga de productos:", error);
+  }
+});
+
+async function handleErrors(response) {
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+
+  try {
+    return await response.json();
+  } catch (error) {
+    // Si no se puede parsear como JSON, devolver el texto directamente
+    return { error: await response.text() };
+  }
+}
+
+
